@@ -10,6 +10,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: 'src/',
   buildDir: '.nuxt/nuxt',
+  modules: ['@nuxt/content'],
   routeRules: {
     '/**': { static: true, ssr: false },
   },

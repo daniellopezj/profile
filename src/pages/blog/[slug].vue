@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <div v-if="post">
+    blog
+    <ContentRendererMarkdown :value="post" />
+    <!-- {{ post }} -->
     <!-- <ContentDoc /> -->
   </div>
 </template>
@@ -10,14 +13,18 @@ import { useRoute } from 'vue-router';
 
 const route = useRoute();
 
-const post = ref(null);
+let post: Ref<unknown | null> = ref(null);
 
-// onMounted(async () => {
-//   const posts = await $context('blog-1.md')
-//     .only(['title', 'image', 'tags', 'slug'])
-//     .sortBy('createdAt', 'desc')
-//     .fetch();
-// });
+onBeforeMount(async () => {
+  const { data } = await useAsyncData('', () =>
+    queryContent('/blog-1').findOne(),
+  );
+  post.value = data.value;
+  // console.log(inQuery.value);
+  // const { data: inQuery } = await useAsyncData('in', () => {
+  //   return queryContent('/').where({ title: 'blog-1' }).find();
+  // });
+});
 </script>
 
 <style scoped></style>
