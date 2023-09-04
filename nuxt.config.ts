@@ -6,12 +6,37 @@ export default defineNuxtConfig({
       titleTemplate: '%s - Daniel López',
     },
   },
-  // modules: ['@nuxt/content'],
+  modules: ['@nuxt/content'],
+  build: {
+    transpile: ['vuetify'],
+  },
+  vite: {
+    define: {
+      'process.env.DEBUG': process.env.NUXT_DEBUG || false,
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@import "./src/assets/scss/styles.scss";',
+          charset: false,
+        },
+      },
+    },
+    server: {
+      watch: {
+        usePolling: true,
+      },
+    },
+  },
   devtools: { enabled: true },
   srcDir: 'src/',
   buildDir: '.nuxt/nuxt',
-  modules: ['@nuxt/content'],
   routeRules: {
     '/**': { static: true, ssr: false },
+  },
+  runtimeConfig: {
+    public: {
+      baseURL: process.env.NUXT_PUBLIC_API_BASE_URL,
+    },
   },
 });

@@ -1,17 +1,18 @@
 <template>
-  <div>
-<h1>headerr</h1>
-<slot/>
-<h1>footer</h1>
-
-
-  </div>
+  <v-app>
+    <TopBar />
+    <v-container class="main-container">
+      <slot />
+    </v-container>
+    <Footer />
+  </v-app>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts"></script>
 
-</script>
-
-<style scoped>
-
+<style scoped lang="scss">
+.main-container {
+  max-width: $max-width;
+  min-height: 95vh;
+}
 </style>
