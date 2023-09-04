@@ -10,7 +10,13 @@ definePageMeta({
 });
 
 onMounted(async () => {
-  // const posts = await $content()
+  // const contentQuery = queryContent('').findOne;
+  // console.log(contentQuery);
+  // const { data } = await useAsyncData('', () => {
+  //   return queryContent('/').only(['title']).findOne();
+  // });
+  // console.log(data.value);
+  // const posts = await useAsyncData()
   //   .only(['title', 'image', 'tags', 'slug'])
   //   .sortBy('createdAt', 'desc')
   //   .fetch();
