@@ -1,10 +1,10 @@
 ---
-title: 1 blog post
+title: blog-1
 image: first-post.jpg
 tags:
   - Front-end
   - Programming
   - Career
 ---
-# 2️⃣ Blog 1
-contenido blog 1 
+#  Blog 1
+contenido blog 1  test
