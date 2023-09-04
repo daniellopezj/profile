@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <h1>gola</h1>
+  <div class="home__container">
+    <home-about></home-about>
+    <home-project-list></home-project-list>
+    <base-social></base-social>
   </div>
 </template>
 
@@ -23,4 +25,12 @@ onMounted(async () => {
 });
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.home {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+</style>
