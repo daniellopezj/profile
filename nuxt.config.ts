@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'Daniel López',
-      titleTemplate: '%s - Daniel López',
+      // titleTemplate: '%s - Daniel López',
     },
   },
   modules: ['@nuxt/content'],
