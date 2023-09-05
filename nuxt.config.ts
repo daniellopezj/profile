@@ -6,7 +6,7 @@ export default defineNuxtConfig({
       titleTemplate: '%s - Daniel López',
     },
   },
-  ssr: false,
+  ssr: true,
   modules: ['@nuxt/content'],
   build: {
     transpile: ['vuetify'],
