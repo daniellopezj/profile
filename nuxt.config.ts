@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'Daniel López',
-      titleTemplate: '%s - Daniel López',
+      // titleTemplate: '%s - Daniel López',
     },
   },
   modules: ['@nuxt/content'],
@@ -11,9 +11,6 @@ export default defineNuxtConfig({
     transpile: ['vuetify'],
   },
   vite: {
-    define: {
-      'process.env.DEBUG': process.env.NUXT_DEBUG || false,
-    },
     css: {
       preprocessorOptions: {
         scss: {
@@ -22,15 +19,9 @@ export default defineNuxtConfig({
         },
       },
     },
-    server: {
-      watch: {
-        usePolling: true,
-      },
-    },
   },
   devtools: { enabled: true },
   srcDir: 'src/',
-  buildDir: '.nuxt/nuxt',
   routeRules: {
     '/**': { static: true, ssr: false },
   },
