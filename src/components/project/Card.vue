@@ -11,7 +11,11 @@
     <div class="project-card__body">
       <h4>{{ project.title }}</h4>
       <span v-html="project.description"></span>
-      leer mas
+
+      <span class="project-card__read-more">
+        👉
+        <span>leer más</span>
+      </span>
     </div>
   </div>
 </template>
@@ -53,7 +57,13 @@ const props = defineProps({
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+  }
+
+  &__read-more {
+    opacity: 0.8;
+    span {
+      text-decoration: underline;
+    }
   }
 }
 </style>

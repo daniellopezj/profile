@@ -51,7 +51,7 @@ const drawer = ref(false);
 const links = [
   { id: 0, title: 'Inicio', path: '/' },
   { id: 1, title: 'Sobre mí', path: '/character' },
-  { id: 2, title: 'Proyectos', path: '/episode' },
+  { id: 2, title: 'Proyectos', path: '/projects' },
   { id: 3, title: 'Blog', path: '/location' },
   { id: 3, title: 'Contacto', path: '/location' },
 ];

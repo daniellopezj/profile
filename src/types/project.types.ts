@@ -1,5 +1,5 @@
 export interface Project {
-  index: number;
+  id: number;
   title: string;
   image: string;
   description: string;
