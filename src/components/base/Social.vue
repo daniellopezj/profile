@@ -1,19 +1,12 @@
 <template>
   <div class="social__container">
-    <h2 class="mb-3">Puedes encontrarme en</h2>
+    <h2>Puedes encontrarme en</h2>
     <div class="social__items">
-      <v-btn
-        aria-label="social-network"
-        class="social__item-button"
-        v-for="icon in icons"
-        :key="icon.id"
-        :prepend-icon="icon.icon"
-        :href="icon.link"
-        target="_blank"
-        variant="outlined"
-      >
-        {{ icon.text }}
-      </v-btn>
+      <base-item-link
+        v-for="(link, index) in links"
+        :key="index"
+        :link="link"
+      />
     </div>
   </div>
 </template>
@@ -21,22 +14,20 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { mdiLinkedin, mdiGithub, mdiTwitter } from '@mdi/js';
+import { LinkItem } from '~/types/project.types';
 
-const icons = ref([
+const links: Ref<LinkItem[]> = ref([
   {
-    id: 0,
     link: 'https://linkedin.com/in/daniel-lopezj/',
     icon: mdiLinkedin,
     text: 'LinkedIn',
   },
   {
-    id: 1,
     link: 'https://github.com/daniellopezj',
     icon: mdiGithub,
-    text: 'Github',
+    text: 'GitHub',
   },
   {
-    id: 3,
     link: 'https://twitter.com/daniellopezj_',
     icon: mdiTwitter,
     text: 'twitter',

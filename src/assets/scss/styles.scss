@@ -13,3 +13,20 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+.link {
+  color: rgb(181 153 255);
+}
+
+.link:hover {
+  font-weight: 500;
+}
+
+h2 {
+  margin-bottom: 0.75rem;
+}
+
+.highlight-word {
+  color: rgb(237, 163, 24);
+  // color: rgba(var(--v-theme-second), );
+}

@@ -2,18 +2,29 @@
   <div>
     <h1>proyectos</h1>
     <span class="projects__content">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate ad
-      dolore est obcaecati repellat ea ab magnam enim eveniet reiciendis ut
-      optio hic, nulla deserunt, nesciunt consequatur, soluta assumenda
-      reprehenderit.
+      Aquí puedes encontrar proyectos personales y otros a nivel profesional en
+      los que he participado
     </span>
 
     <div class="projects__list">
       <project-card
         v-for="project in data"
-        :project="project"
         :key="project.id"
+        :project="project"
+        @click="() => router.push(`projects/${project.slug}`)"
       ></project-card>
+    </div>
+    <div class="projects__github">
+      <span>
+        🚀 Puedes ver mas proyectos en
+        <nuxt-link
+          class="link"
+          :to="'https://github.com/daniellopezj'"
+          target="_blank"
+        >
+          GitHub
+        </nuxt-link>
+      </span>
     </div>
   </div>
 </template>
@@ -22,6 +33,7 @@
 import { projects } from '@/data/Projects.data';
 import { Project } from '~/types/project.types';
 const data: Ref<Project[]> = ref(projects);
+const router = useRouter();
 </script>
 
 <style scoped lang="scss">
@@ -30,13 +42,22 @@ const data: Ref<Project[]> = ref(projects);
     display: flex;
   }
 
+  &__github {
+    display: flex;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: rgba(var(--v-theme-second), 0.1);
+    font-size: 1.1rem;
+  }
+
   &__content {
     grid-template-columns: 1fr 1fr;
     border-left: 5px solid rgb(var(--v-theme-second));
     padding: 0 15px;
     display: flex;
-    font-size: 18px;
+    // font-size: 18px;
     margin: 1rem 0;
+    opacity: 0.9;
   }
 
   &__list {

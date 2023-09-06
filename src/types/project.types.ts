@@ -1,9 +1,16 @@
+export interface LinkItem {
+  text: string;
+  icon: string;
+  link: string;
+}
+
 export interface Project {
   id: number;
   title: string;
-  image: string;
+  slug: string;
+  image?: string;
   description: string;
   skills: string[];
-  link: string;
+  link: LinkItem[];
   achievements?: string[];
 }

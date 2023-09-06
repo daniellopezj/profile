@@ -53,7 +53,7 @@ const links = [
   { id: 1, title: 'Sobre mí', path: '/character' },
   { id: 2, title: 'Proyectos', path: '/projects' },
   { id: 3, title: 'Blog', path: '/location' },
-  { id: 3, title: 'Contacto', path: '/location' },
+  // { id: 3, title: 'Contacto', path: '/location' },
 ];
 
 const activeLink = computed(() => {
