@@ -43,7 +43,7 @@ export const projects: Project[] = [
     slug: 'rick-and-morty',
     title: 'Rick and Morty',
     description:
-      'Este proyecto utiliza la API pública de <a href="https://rickandmortyapi.com/" target="_blank" class="link">Rick and Morty</a>. Utiliza programación orientada a objetos con TypeScript, lo cual es fácil de aplicar en proyectos mucho más grandes y con mayor complejidad',
+      'Este proyecto consume la API pública de <a href="https://rickandmortyapi.com/" target="_blank" class="link">Rick and Morty</a>. Además, implementa programación orientada a objetos con TypeScript, lo cual es fácil de aplicar en proyectos mucho más grandes y con mayor complejidad.',
     link: [
       {
         icon: mdiWeb,
