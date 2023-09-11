@@ -13,3 +13,29 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+p {
+  margin: 1rem 0;
+  opacity: 0.9;
+}
+
+.link {
+  // color: rgb(181 153 255);
+  // color: rgb(237, 163, 24);
+  color: #fbd065;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  margin-bottom: 0.75rem;
+}
+
+.highlight-word {
+  color: rgb(237, 163, 24);
+  // color: rgba(var(--v-theme-second), );
+}

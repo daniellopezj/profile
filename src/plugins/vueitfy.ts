@@ -2,7 +2,7 @@ import 'vuetify/styles';
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg';
 import * as components from 'vuetify/components';
 import * as directives from 'vuetify/directives';
-import { ThemeDefinition, createVuetify } from 'vuetify';
+import { createVuetify } from 'vuetify';
 
 export default defineNuxtPlugin((nuxtApp) => {
   const vuetify = createVuetify({
@@ -12,8 +12,9 @@ export default defineNuxtPlugin((nuxtApp) => {
         customDark: {
           dark: true,
           colors: {
-            background: '#20252C',
-            second: '#bf8415',
+            background: '#202225',
+            second: '#fbd065',
+            textDark: '#bf8415',
             surface: '#FFFFFF',
             primary: '#FF293B',
             'primary-darken-1': '#3700B3',
@@ -23,7 +24,6 @@ export default defineNuxtPlugin((nuxtApp) => {
             info: '#2196F3',
             success: '#4CAF50',
             warning: '#FB8C00',
-            // customvalidatecontrol: '#03DAC6'
           },
         },
       },

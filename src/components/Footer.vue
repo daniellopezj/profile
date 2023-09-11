@@ -1,8 +1,10 @@
 <template>
   <v-footer color="background" class="appfooter__container">
     <div class="appfooter__content">
-      <span class="pr-1">© {{ new Date().getFullYear() }} | Daniel López</span>
-      <v-btn
+      <span class="pr-1">
+        © {{ new Date().getFullYear() }} | Daniel López 💻
+      </span>
+      <!-- <v-btn
         aria-label="social-network"
         class="appfooter__social-button"
         v-for="icon in icons"
@@ -12,7 +14,7 @@
         size="small"
         :href="icon.link"
         target="_blank"
-      ></v-btn>
+      ></v-btn> -->
     </div>
   </v-footer>
 </template>

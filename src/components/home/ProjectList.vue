@@ -1,6 +1,6 @@
 <template>
   <div class="project-list__container">
-    <h2 class="mb-3">Ultimo proyecto</h2>
+    <h2>Último proyecto</h2>
     <div class="project-list__items">
       <project-card :project="data"></project-card>
     </div>
