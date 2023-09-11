@@ -1,7 +1,7 @@
 <template>
   <v-app-bar color="background" elevation="0" class="topbar__container">
     <div class="topbar__content">
-      <NuxtLink class="topbar__container-name" :to="''">
+      <NuxtLink class="topbar__container-name" :to="'/'">
         <v-img class="topbar__logo" src="/images/profile.png" alt="logo" />
         Daniel López
       </NuxtLink>
@@ -50,9 +50,9 @@ const drawer = ref(false);
 
 const links = [
   { id: 0, title: 'Inicio', path: '/' },
-  { id: 1, title: 'Sobre mí', path: '/character' },
+  { id: 1, title: 'Sobre mí', path: '/about-me' },
   { id: 2, title: 'Proyectos', path: '/projects' },
-  { id: 3, title: 'Blog', path: '/location' },
+  // { id: 3, title: 'Blog', path: '/location' },
   // { id: 3, title: 'Contacto', path: '/location' },
 ];
 
@@ -95,15 +95,21 @@ const toggleDrawer = () => {
       opacity: 0.95;
       color: white;
     }
+    li:hover {
+      color: rgba(var(--v-theme-second));
+    }
   }
 
   &__container-name {
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
     font-size: 1.1rem;
     font-weight: bold;
+    color: white;
+    text-decoration: none;
   }
 
   &__navigation-small {
@@ -124,8 +130,8 @@ const toggleDrawer = () => {
   &__active {
     opacity: 1;
     color: rgba(var(--v-theme-textActive), 1);
-    // border-bottom: 2px solid rgba(var(--v-theme-textActive), 1);
   }
+
   &__logo {
     width: 48px;
     border-radius: 50%;

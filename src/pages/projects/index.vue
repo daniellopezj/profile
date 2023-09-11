@@ -46,16 +46,15 @@ const router = useRouter();
     display: flex;
     padding: 1rem;
     border-radius: 8px;
-    background-color: rgba(var(--v-theme-second), 0.1);
-    font-size: 1.1rem;
+    background-color: rgba(var(--v-theme-textDark), 0.1);
+    opacity: 0.9;
   }
 
   &__content {
     grid-template-columns: 1fr 1fr;
-    border-left: 5px solid rgb(var(--v-theme-second));
+    border-left: 5px solid rgb(var(--v-theme-textDark));
     padding: 0 15px;
     display: flex;
-    // font-size: 18px;
     margin: 1rem 0;
     opacity: 0.9;
   }

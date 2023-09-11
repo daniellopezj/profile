@@ -11,19 +11,16 @@
       cover
       :src="project.image"
     ></v-img>
-    <div class="project__container-image"></div>
     <div>
-      <h2>Tecnologías utilizadas💻</h2>
-
+      <h2>💻Tecnologías utilizadas</h2>
       <div class="project__list-skills">
         <span v-for="skill in project.skills" class="project__skill">
           {{ skill }}
         </span>
       </div>
     </div>
-
     <div>
-      <h2>¿Qué he aprendido? ✨</h2>
+      <h2>✨ ¿Qué he aprendido?</h2>
       <ul>
         <li
           class="project__achievement"
@@ -81,7 +78,7 @@ onBeforeMount(() => {
   &__skill {
     padding: 0.5rem 1rem;
     font-size: 1.1rem;
-    background: rgba(var(--v-theme-second), 0.6);
+    background: rgba(var(--v-theme-textDark), 0.6);
     border-radius: 5px;
     color: #ffffff;
   }
@@ -90,7 +87,6 @@ onBeforeMount(() => {
     margin-top: 2rem;
     gap: 1rem;
     display: flex;
-    // grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 
   &__achievement {

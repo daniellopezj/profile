@@ -78,54 +78,66 @@ export const projects: Project[] = [
     image: `/images/projects/portafolio.webp`,
     title: 'Portafolio Open Source',
     description:
-      "Proyecto Open source desarrollado con angular 14 el cual le proporciona a desarrolladores una plantilla para crear su portafolio web. Es totalmente gratis!!. <a class='link-github' target='_blank' href='https://github.com/daniellopezj/public-personalPage'>Ver github</a>",
+      'Portafolio Open Source es un proyecto desarrollado para la comunidad, donde cualquier desarrollador con conocimientos básicos en <span class="highlight-word">Angular</span> puede tener un sitio web para compartir toda su información. Este portafolio está diseñado para manejar <span class="highlight-word">múltiples idiomas</span> y permitir el <span class="highlight-word">envío de correos</span> para que tus clientes puedan contactarte. Además, cuenta con un diseño completamente adaptativo a cualquier dispositivo.',
     link: [
       {
-        icon: mdiGithub,
+        icon: mdiWeb,
         text: 'ver Demo',
-        link: 'https://clone-idealista.vercel.app/',
+        link: 'https://daniellopezj-portafolio.netlify.app/',
       },
       {
         icon: mdiGithub,
         text: 'ver GitHub',
-        link: 'https://clone-idealista.vercel.app/',
+        link: 'https://github.com/daniellopezj/public-personalPage',
       },
     ],
     skills: [
-      'React',
-      'Next.js',
+      'Angular',
+      'Netlify',
       'git',
       'TypeScript',
       'Responsive Design',
       'Html/css',
+    ],
+    achievements: [
+      '• Mejorar mis habilidades en <span class="highlight-word">Angular</span>.',
+      '• Aprender a utilizar <span class="highlight-word">Netlify</span> para el despliegue del proyecto y conocer las diferencias que tiene con <span class="highlight-word">Vercel</span>.',
+      '• Utilizar <span class="highlight-word">ngx-translate</span> para el manejo de múltiples idiomas, esto permite llegar a más personas.',
+      '• Poder contribuir a la comunidad me ha generado una gran satisfacción, saber que tu trabajo le ha solucionado algún problema específico a alguien más.',
     ],
   },
   {
     id: 2,
     slug: 'portafolio',
-    image: `/images/projects/portafolio.webp`,
-    title: 'Portafolio Open Source',
+    image: `/images/projects/personalPage.webp`,
+    title: 'Portafolio Open Source 2',
     description:
-      "Proyecto Open source desarrollado con angular 14 el cual le proporciona a desarrolladores una plantilla para crear su portafolio web. Es totalmente gratis!!. <a class='link-github' target='_blank' href='https://github.com/daniellopezj/public-personalPage'>Ver github</a>",
+      'Portafolio Open Source 2 es un proyecto desarrollado para la comunidad, donde cualquier desarrollador con conocimientos básicos en <span class="highlight-word">Angular</span> puede tener un sitio web para compartir toda su información. Este portafolio está diseñado para manejar <span class="highlight-word">múltiples idiomas</span> y permitir el <span class="highlight-word">envío de correos</span> para que tus clientes puedan contactarte. Además, cuenta con un diseño completamente adaptativo a cualquier dispositivo.',
     link: [
       {
         icon: mdiGithub,
         text: 'ver Demo',
-        link: 'https://clone-idealista.vercel.app/',
+        link: 'https://github.com/daniellopezj/personalPage',
       },
       {
         icon: mdiGithub,
         text: 'ver GitHub',
-        link: 'https://clone-idealista.vercel.app/',
+        link: 'https://github.com/daniellopezj/personalPage',
       },
     ],
     skills: [
-      'React',
-      'Next.js',
+      'Angular',
+      'Netlify',
       'git',
       'TypeScript',
       'Responsive Design',
       'Html/css',
+    ],
+    achievements: [
+      '• Mejorar mis habilidades en <span class="highlight-word">Angular</span> diseñando nuevos templates.',
+      '• Aprender a utilizar <span class="highlight-word">Netlify</span> para el despliegue del proyecto y conocer las diferencias que tiene con <span class="highlight-word">Vercel</span>.',
+      '• Utilizar <span class="highlight-word">ngx-translate</span> para el manejo de múltiples idiomas, esto permite llegar a más personas.',
+      '• Poder contribuir a la comunidad me ha generado una gran satisfacción, saber que tu trabajo le ha solucionado algún problema específico a alguien más.',
     ],
   },
   {
@@ -134,26 +146,33 @@ export const projects: Project[] = [
     slug: 'mochileros',
     title: 'Mochileros',
     description:
-      'La empresa Mexicana, Mochileros. Dedicada a la comercialización de tours a nivel mundial. Requería desarrollar una plataforma web en la cual publicar sus servicios, la cual debía contar con sistemas de geolocalización e integración con pasarelas de pagos . Además, un panel de control en el cual se gestionara la información publicada en la plataforma web.    ',
+      'La empresa Mexicana, Mochileros. Dedicada a la comercialización de tours a nivel mundial. Requería desarrollar una plataforma web en la cual publicar sus servicios, la cual debía contar con sistemas de geolocalización e integración con pasarelas de pagos. Además, un panel de control en el cual se gestionara la información publicada en la plataforma web.',
     link: [
       {
-        icon: mdiGithub,
-        text: 'ver Demo',
-        link: 'https://clone-idealista.vercel.app/',
-      },
-      {
-        icon: mdiGithub,
-        text: 'ver GitHub',
-        link: 'https://clone-idealista.vercel.app/',
+        icon: mdiYoutube,
+        text: 'ver Funcionamiento',
+        link:
+          'https://www.youtube.com/watch?v=gh2jDNJ1vkU&t=5s&ab_channel=daniell%C3%B3pez',
       },
     ],
     skills: [
-      'React',
-      'Next.js',
+      'Angular',
+      'Node js',
+      'Express',
+      'Mongo db',
+      'Jest',
+      'AWS',
       'git',
       'TypeScript',
       'Responsive Design',
       'Html/css',
+    ],
+    achievements: [
+      '• Implementar una pasarela de pagos con <span class="highlight-word">stripe</span> y agregar referidos mediante <span class="highlight-word">stripe connect</span>.',
+      '• Trabajar en todo el ciclo de desarrollo de software, desde el diseño de vistas hasta el despliegue continuo en <span class="highlight-word">AWS</span>.',
+      '• Trabajar en un proyecto internacional con un equipo multidisciplinario.',
+      '• Utilizar sistemas de geolocalización con <span class="highlight-word">Angular</span>.',
+      '• Mejorar mis <span class="highlight-word">Soft Skills</span>, dado que se tenía contacto con todos los stakeholders del proyecto.',
     ],
   },
   {
@@ -162,33 +181,31 @@ export const projects: Project[] = [
     slug: 'gds-sabre',
     title: 'GDS Sabre',
     description:
-      "Replica completamente funcional de la principal Empresa del sector inmobiliario en Europa.   <a class='link-github' target='_blank' href='https://github.com/daniellopezj/clone-idealista'>Ver github</a>",
+      'Integración del GDS (sistema de distribución global) Sabre. Esta plataforma proporciona diferentes APIs necesarias para la comercialización de vuelos a nivel mundial, proporcionando precios, horarios, escalas, aeropuertos y demás.',
     link: [
-      {
-        icon: mdiGithub,
-        text: 'ver Demo',
-        link: 'https://clone-idealista.vercel.app/',
-      },
-      {
-        icon: mdiGithub,
-        text: 'ver GitHub',
-        link: 'https://clone-idealista.vercel.app/',
-      },
       {
         icon: mdiYoutube,
         text: 'ver Funcionamiento',
-        link: 'https://clone-idealista.vercel.app/',
+        link:
+          'https://www.youtube.com/watch?v=xaXoLalub88&ab_channel=daniell%C3%B3pez',
       },
     ],
-
     skills: [
-      'React',
-      'Next.js',
+      'Angular',
+      'Node js',
+      'Express',
+      'Mongo db',
+      'Jest',
+      'AWS',
       'git',
       'TypeScript',
       'Responsive Design',
       'Html/css',
     ],
-    achievements: ['• Aprender a integrar servicios '],
+    achievements: [
+      '• Implementar una pasarela de pagos con <span class="highlight-word">stripe</span>',
+      '• Trabajar el ciclo de desarrollo de software, desde el diseño de vistas hasta el despliegue continuo en <span class="highlight-word">AWS</span>.',
+      '• Utilizar sistemas de geolocalización con <span class="highlight-word">Angular</span>.',
+    ],
   },
 ];

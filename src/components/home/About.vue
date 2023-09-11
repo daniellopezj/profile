@@ -3,17 +3,28 @@
     <h1>Ingeniero de Software</h1>
     <div class="about__content">
       <div>
-        <p class="mb-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam alias rem
-          voluptatum adipisci eum eos? Blanditiis temporibus, voluptatibus ea
-          harum cupiditate ipsum delectus saepe aliquid reprehenderit debitis!
-          Repellendus, soluta error.
+        <p>
+          ¡Hola! 👋 Mi nombre es Daniel López,
+          <span class="highlight-word">ingeniero de software</span>
+          con mas de 4 años de experiencia en el mundo de la programación.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam alias rem
-          voluptatum adipisci eum eos? Blanditiis temporibus, voluptatibus ea
-          harum cupiditate ipsum delectus saepe aliquid reprehenderit debitis!
-          Repellendus, soluta error.
+          Mi especialidad es el desarrollo
+          <span class="highlight-word">frontend</span>
+          y me dedico a crear contenido sobre programación y desarrollo web.
+        </p>
+        <p>
+          Además, trabajo de forma remota como
+          <span class="highlight-word">Senior Frontend Engineer</span>
+          en
+          <nuxt-link
+            class="link"
+            to="https://www.linkedin.com/company/kiteris"
+            target="_blank"
+          >
+            Kiteris,
+          </nuxt-link>
+          una empresa de España.
         </p>
       </div>
       <div class="about__container-image">
@@ -37,9 +48,8 @@
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
-    border-left: 5px solid rgb(var(--v-theme-second));
-    padding: 15px;
-    font-size: 18px;
+    border-left: 5px solid rgb(var(--v-theme-textDark));
+    padding: 0 15px;
   }
 
   &__container-image {
@@ -47,7 +57,7 @@
   }
 
   &__image {
-    width: 240px;
+    width: 180px;
     border-radius: 50%;
     border: 4px solid rgb(var(--v-theme-second));
   }
