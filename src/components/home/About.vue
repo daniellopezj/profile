@@ -1,6 +1,6 @@
 <template>
   <div class="about__container">
-    <h1>Ingeniero de Software</h1>
+    <h1 class="about__title">Ingeniero de Software</h1>
     <div class="about__content">
       <div>
         <p>
@@ -27,6 +27,7 @@
           una empresa de España.
         </p>
       </div>
+      <h1 class="about__small-title">Ingeniero de Software</h1>
       <div class="about__container-image">
         <v-img class="about__image" src="/images/profile.png" alt="logo" />
       </div>
@@ -60,6 +61,42 @@
     width: 180px;
     border-radius: 50%;
     border: 4px solid rgb(var(--v-theme-second));
+  }
+
+  &__small-title {
+    display: none;
+  }
+}
+
+@media (max-width: 599px) {
+  .about {
+    &__content {
+      display: flex;
+      flex-direction: column-reverse;
+      border-left: none;
+      padding: 0;
+      gap: 0;
+    }
+
+    &__container-image {
+      margin: initial;
+    }
+
+    &__image {
+      width: 120px;
+      border: initial;
+      border: 2px solid rgb(var(--v-theme-second));
+      margin-bottom: 1rem;
+    }
+
+    &__title {
+      display: none;
+    }
+
+    &__small-title {
+      font-size: 1.75rem;
+      display: initial;
+    }
   }
 }
 </style>

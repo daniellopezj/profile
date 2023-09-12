@@ -5,9 +5,9 @@
         <v-img class="topbar__logo" src="/images/profile.png" alt="logo" />
         Daniel López
       </NuxtLink>
-      <ul v-if="!mobile" class="topbar__navigation">
+      <ul v-if="smAndUp" class="topbar__navigation">
         <NuxtLink v-for="link in links" :key="link.id" :to="link.path">
-          <li :class="{ topbar__active: link.id === activeLink }">
+          <li>
             {{ link.title }}
           </li>
         </NuxtLink>
@@ -15,7 +15,7 @@
       <v-btn
         aria-label="menu"
         :rounded="4"
-        v-if="mobile"
+        v-if="!smAndUp"
         icon
         @click="toggleDrawer"
       >
@@ -25,14 +25,14 @@
   </v-app-bar>
   <v-navigation-drawer
     color="background"
-    v-if="mobile"
+    v-if="!smAndUp"
     v-model="drawer"
     location="top"
-    temporary
+    class="topbar__small-drawer"
   >
     <ul class="topbar__navigation-small">
       <NuxtLink v-for="link in links" :key="link.id" :to="link.path">
-        <li :class="{ topbar__active: link.id === activeLink }">
+        <li>
           {{ link.title }}
         </li>
       </NuxtLink>
@@ -44,8 +44,7 @@
 import { useDisplay } from 'vuetify';
 import { mdiMenu } from '@mdi/js';
 
-const route = useRoute();
-const { mobile } = useDisplay();
+const { smAndUp } = useDisplay();
 const drawer = ref(false);
 
 const links = [
@@ -56,13 +55,11 @@ const links = [
   // { id: 3, title: 'Contacto', path: '/location' },
 ];
 
-const activeLink = computed(() => {
-  const index = links.findIndex((i) => {
-    // if (i.id > 0) {
-    return route.path.includes(i.path);
-    // }
-  });
-  return index !== -1 ? index : 0;
+const height = computed(() => {
+  if (drawer.value) {
+    return '48px';
+  }
+  return '0px';
 });
 
 const toggleDrawer = () => {
@@ -73,7 +70,7 @@ const toggleDrawer = () => {
 <style lang="scss">
 .topbar {
   &__container {
-    position: inherit !important;
+    position: relative !important;
   }
   &__content {
     display: flex;
@@ -142,26 +139,20 @@ const toggleDrawer = () => {
 
 @media (max-width: 599px) {
   .topbar {
-    &__active {
-      opacity: 1;
-      border-bottom: 2px solid rgba(var(--v-theme-textActive), 1);
+    &__small-drawer {
+      height: fit-content !important;
+      top: v-bind(height) !important;
     }
-    &__theme {
-      display: flex;
-      justify-content: center;
+    &__logo {
+      width: 32px;
+      border-radius: 50%;
+      margin-left: 1rem;
+      cursor: pointer;
     }
-  }
-}
 
-@media (min-width: 600px) and (max-width: 959px) {
-  .topbar {
-    &__active {
-      opacity: 1;
-      border-bottom: 2px solid rgba(var(--v-theme-textActive), 1);
-    }
-    &__theme {
-      display: flex;
-      justify-content: center;
+    &__container-name {
+      gap: 0.5rem;
+      font-size: 1rem;
     }
   }
 }

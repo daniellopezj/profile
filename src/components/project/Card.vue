@@ -44,16 +44,15 @@ defineProps({
   }
   &__container:hover {
     opacity: 0.85;
-    // filter: brightness(1.01);
   }
 
   &__description {
-    max-height: 3em; /* Adjust the height as needed */
+    max-height: 3em;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: normal;
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* Number of lines to limit to */
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     opacity: 0.85;
   }
@@ -77,6 +76,25 @@ defineProps({
     opacity: 0.8;
     span {
       text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .project-card {
+    &__container {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+    &__image {
+      height: 180px;
+    }
+    &__body {
+      padding: 0;
+    }
+    &__read-more {
+      opacity: 0.8;
     }
   }
 }
