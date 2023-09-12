@@ -32,6 +32,11 @@
 <script setup lang="ts">
 import { projects } from '@/data/Projects.data';
 import { Project } from '~/types/project.types';
+
+useHead({
+  title: 'Proyectos',
+});
+
 const data: Ref<Project[]> = ref(projects);
 const router = useRouter();
 </script>

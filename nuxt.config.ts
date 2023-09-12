@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Daniel López',
+      title: 'Daniel López 🌔 | Frontend, JavaScript, vue, CSS ',
       script: [
         {
           src: 'https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js',
@@ -17,7 +17,6 @@ export default defineNuxtConfig({
           'data-y_margin': '18',
         },
       ],
-      // titleTemplate: '%s - Daniel López',
     },
   },
   modules: ['@nuxt/content'],

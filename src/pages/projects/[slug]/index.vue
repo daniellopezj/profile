@@ -51,6 +51,10 @@ onBeforeMount(() => {
   const slug = route.params.slug;
   project.value = projects.find((i) => i.slug === slug);
 });
+
+useHead({
+  title: 'Proyectos',
+});
 </script>
 
 <style scoped lang="scss">
