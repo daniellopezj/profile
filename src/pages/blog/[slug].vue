@@ -9,10 +9,6 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useRoute } from 'vue-router';
-
-const route = useRoute();
-
 let post: Ref<unknown | null> = ref(null);
 
 onBeforeMount(async () => {
