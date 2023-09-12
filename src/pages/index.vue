@@ -20,4 +20,12 @@ definePageMeta({
     gap: 2rem;
   }
 }
+
+@media (max-width: 599px) {
+  .home {
+    &__container {
+      gap: 1.5rem;
+    }
+  }
+}
 </style>

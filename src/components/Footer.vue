@@ -4,38 +4,11 @@
       <span class="pr-1">
         © {{ new Date().getFullYear() }} | Daniel López 💻
       </span>
-      <!-- <v-btn
-        aria-label="social-network"
-        class="appfooter__social-button"
-        v-for="icon in icons"
-        :key="icon.id"
-        :icon="icon.icon"
-        variant="text"
-        size="small"
-        :href="icon.link"
-        target="_blank"
-      ></v-btn> -->
     </div>
   </v-footer>
 </template>
 
-<script setup lang="ts">
-import { ref } from 'vue';
-import { mdiLinkedin, mdiGithub } from '@mdi/js';
-
-const icons = ref([
-  {
-    id: 0,
-    link: 'https://linkedin.com/in/daniel-lopezj/',
-    icon: mdiLinkedin,
-  },
-  {
-    id: 1,
-    link: 'https://github.com/daniellopezj',
-    icon: mdiGithub,
-  },
-]);
-</script>
+<script setup lang="ts"></script>
 
 <style scoped lang="scss">
 .appfooter {
