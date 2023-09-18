@@ -35,7 +35,7 @@
     <p></p>
     <v-img
       class="about-me__image"
-      src="/images/profile.png"
+      src="/images/personal.webp"
       alt="profile"
       aspect-ratio="1/1"
       width="450"

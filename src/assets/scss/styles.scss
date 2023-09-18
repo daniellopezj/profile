@@ -1,8 +1,10 @@
 @import './_reset.scss';
 @import './_variables.scss';
 @import './_fonts.scss';
+// @import '../../../node_modules/highlight.js/styles/nord.css';
 
 body {
+  user-select: text;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   font-size: 1rem;
@@ -20,8 +22,6 @@ p {
 }
 
 .link {
-  // color: rgb(181 153 255);
-  // color: rgb(237, 163, 24);
   color: #fbd065;
   cursor: pointer;
   text-decoration: none;
@@ -37,5 +37,27 @@ h2 {
 
 .highlight-word {
   color: rgb(237, 163, 24);
-  // color: rgba(var(--v-theme-second), );
+}
+
+pre {
+  background: #282c34 !important;
+
+  border-radius: 4px;
+  color: #fff;
+  margin: 0;
+  overflow: auto;
+  padding: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  a {
+    text-decoration: none !important;
+    color: white !important;
+    cursor: initial;
+  }
 }
