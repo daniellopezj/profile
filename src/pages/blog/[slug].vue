@@ -1,26 +1,97 @@
 <template>
-  <div v-if="post">
-    blog
-    <ContentRendererMarkdown :value="post" />
-    <!-- {{ post }} -->
-    <!-- <ContentDoc /> -->
+  <div v-if="document">
+    <div class="blog__header">
+      <div>
+        <v-img
+          class="blog__header-icon"
+          src="/icons/JavaScript.webp"
+          alt="profile"
+          width="100"
+          height="100"
+        />
+      </div>
+      <div class="blog__header-content">
+        <h1>{{ document.title }}</h1>
+
+        <div class="blog__header-items">
+          <span class="blog__date">{{ document.date }}</span>
+          <span class="blog__time">{{ document.time }}</span>
+        </div>
+        <div class="blog__tags">
+          <span class="blog__tag" v-for="tag in document.tags">
+            {{ tag }}
+          </span>
+        </div>
+      </div>
+    </div>
+    <ContentDoc :path="document._path" />
   </div>
+  <div v-else>cargando</div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-let post: Ref<unknown | null> = ref(null);
+import { ParsedContent } from '@nuxt/content/dist/runtime/types';
+
+const document: Ref<ParsedContent | null> = ref(null);
+const route = useRoute();
 
 onBeforeMount(async () => {
-  const { data } = await useAsyncData('', () =>
-    queryContent('/blog-1').findOne(),
-  );
-  post.value = data.value;
-  // console.log(inQuery.value);
-  // const { data: inQuery } = await useAsyncData('in', () => {
-  //   return queryContent('/').where({ title: 'blog-1' }).find();
-  // });
+  const { data } = await useAsyncData('', () => {
+    return queryContent('/')
+      .where({ _path: `/${route.params.slug as string}` })
+      .find();
+  });
+  if (data.value) {
+    document.value = data.value[0];
+    useHead({
+      title: document.value.title,
+    });
+  }
 });
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.blog {
+  &__header {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    &-icon {
+      border-radius: 8px;
+    }
+    &-content {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    &-items {
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    gap: 1rem;
+  }
+  &__tag {
+    background-color: rgb(255, 255, 255, 0.9);
+    color: black;
+    padding: 0 6px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  &__date {
+    color: rgba(var(--v-theme-second));
+    font-size: 0.95rem;
+  }
+  &__time {
+    opacity: 0.65;
+    font-size: 0.85rem;
+  }
+}
+</style>

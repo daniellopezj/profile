@@ -19,11 +19,20 @@ AngularJS-powered HTML5 Markdown editor.
 - Type some Markdown on the left
 - See HTML in the right
 - ✨Magic ✨
+
+
 ```js
-  await page.coverage.startCSSCoverage()
-  await page.goto(URL, {waitUntil: 'load'}) // domcontentload, load, networkidle0
-  const cssCoverage = await page.coverage.stopCSSCoverage()
+const string = "midudev"
+const substring = "midu"
+
+// la mejor
+string.includes(substring) // true
+
+// forma antigua
+string.indexOf(substring) !== -1 // true
 ```
+
+
 ## Features
 
 - Import a HTML file and watch it magically convert to Markdown
