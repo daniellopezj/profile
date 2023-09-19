@@ -1,30 +1,29 @@
 <template>
-  <div v-if="document">
+  <div v-if="blog">
     <div class="blog__header">
       <div>
         <v-img
           class="blog__header-icon"
-          src="/icons/JavaScript.webp"
+          :src="blog.icon"
           alt="profile"
           width="100"
           height="100"
         />
       </div>
       <div class="blog__header-content">
-        <h1>{{ document.title }}</h1>
-
+        <h1>{{ blog.title }}</h1>
         <div class="blog__header-items">
-          <span class="blog__date">{{ document.date }}</span>
-          <span class="blog__time">{{ document.time }}</span>
+          <span class="blog__date">{{ blog.date }}</span>
+          <span class="blog__time">{{ blog.time }}</span>
         </div>
         <div class="blog__tags">
-          <span class="blog__tag" v-for="tag in document.tags">
+          <span class="blog__tag" v-for="tag in blog.tags">
             {{ tag }}
           </span>
         </div>
       </div>
     </div>
-    <ContentDoc :path="document._path" />
+    <ContentDoc class="blog__content-doc" :path="blog._path" />
   </div>
   <div v-else>cargando</div>
 </template>
@@ -32,7 +31,7 @@
 <script setup lang="ts">
 import { ParsedContent } from '@nuxt/content/dist/runtime/types';
 
-const document: Ref<ParsedContent | null> = ref(null);
+const blog: Ref<ParsedContent | null> = ref(null);
 const route = useRoute();
 
 onBeforeMount(async () => {
@@ -42,9 +41,10 @@ onBeforeMount(async () => {
       .find();
   });
   if (data.value) {
-    document.value = data.value[0];
+    blog.value = data.value[0];
+    useContentHead(blog.value);
     useHead({
-      title: document.value.title,
+      title: blog.value.title,
     });
   }
 });

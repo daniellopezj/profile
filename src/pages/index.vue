@@ -7,6 +7,9 @@
 </template>
 
 <script setup lang="ts">
+useHead({
+  title: 'Daniel López | Frontend, JavaScript, vue, CSS',
+});
 definePageMeta({
   layoyt: 'public',
 });

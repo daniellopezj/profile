@@ -49,15 +49,31 @@ pre {
   padding: 16px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  a {
-    text-decoration: none !important;
-    color: white !important;
-    cursor: initial;
+.blog__content-doc {
+  p {
+    margin: 0 0 1.5rem;
+    opacity: 0.9;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    a {
+      text-decoration: none !important;
+      color: white !important;
+      cursor: initial;
+    }
+  }
+
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 1rem;
   }
 }
