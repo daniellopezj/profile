@@ -2,7 +2,7 @@
   <v-app-bar color="background" elevation="0" class="topbar__container">
     <div class="topbar__content">
       <NuxtLink class="topbar__container-name" :to="'/'">
-        <v-img class="topbar__logo" src="/images/profile.png" alt="logo" />
+        <v-img class="topbar__logo" src="/images/logo.png" alt="logo" />
         Daniel López
       </NuxtLink>
       <ul v-if="smAndUp" class="topbar__navigation">
@@ -130,8 +130,7 @@ const toggleDrawer = () => {
   }
 
   &__logo {
-    width: 48px;
-    border-radius: 50%;
+    width: 36px;
     margin-left: 1rem;
     cursor: pointer;
   }

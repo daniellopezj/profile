@@ -29,7 +29,7 @@
       </div>
       <h1 class="about__small-title">Ingeniero de Software</h1>
       <div class="about__container-image">
-        <v-img class="about__image" src="/images/profile.png" alt="logo" />
+        <v-img class="about__image" src="/images/profile.webp" alt="logo" />
       </div>
     </div>
   </div>
@@ -58,7 +58,8 @@
   }
 
   &__image {
-    width: 180px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 4px solid rgb(var(--v-theme-second));
   }
@@ -83,6 +84,7 @@
     }
 
     &__image {
+      background-color: red;
       width: 120px;
       border: initial;
       border: 2px solid rgb(var(--v-theme-second));

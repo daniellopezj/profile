@@ -41,29 +41,3 @@ export default defineNuxtPlugin((nuxtApp) => {
   });
   nuxtApp.vueApp.use(vuetify);
 });
-
-// export default createVuetify({
-//   theme: {
-//     themes: {
-//       dark: {
-//         colors: {
-//           primary: '#000000',
-//           navigationDrawer: '#000000',
-//           secondary: '#000000',
-//           iconMode: '#FFF9C4',
-//           textActive: '#19F1FF',
-//           episodeCard: '#1e1b63',
-//           locationCard: '#267b5e',
-//         },
-//       },
-//     },
-//     defaultTheme: 'dark',
-//   },
-//   icons: {
-//     defaultSet: 'mdi',
-//     aliases,
-//     sets: {
-//       mdi,
-//     },
-//   },
-// });
