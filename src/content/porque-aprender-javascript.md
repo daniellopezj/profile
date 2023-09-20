@@ -4,7 +4,7 @@ image: porque-aprender-javascript.jpg
 icon: /icons/JavaScript.webp
 tags:
   - 💻 Desarrollo
-time: 3 minutos de lectura
+time: 5 minutos de lectura
 date: 21 septiembre, 2023
 ---
 
@@ -13,8 +13,6 @@ Cuando inicias en el mundo la programación, puede ser dificil elegir que lengua
 Para hacer una correcta eleccion, debes tener en cuenta factores propios del lenguaje como lo es su documentación, cuales son sus diferentes usos, comunidad que le da mantenimiento y su historia. Ademas, es importante conocer que comportamiento tiene en mercado tecnológico como lo es la oferta y demanda, que empresas utilizan este lenguaje y el rango de salarios en el que se encuentra.
 
 En el siguiente articulo se muestra por que JavaScript es la mejor opción para iniciar en la programación o si ya perteneces a la industria por que debe ser tu siguiente Lenguaje por aprender.
-
-<!-- https://w3techs.com/technologies/details/cp-javascript -->
 
 ## Que es JavaScript
 
