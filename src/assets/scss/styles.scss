@@ -40,7 +40,8 @@ h2 {
 }
 
 pre {
-  background: #282c34 !important;
+  // background: #282c34 !important;
+  background: #0f131a !important;
 
   border-radius: 4px;
   color: #fff;
@@ -66,14 +67,27 @@ pre {
       cursor: initial;
     }
   }
-
-  h2 {
-    margin-bottom: 1.5rem;
-  }
-  h3,
+  h2 h3,
   h4,
   h5,
-  h6 {
-    margin-bottom: 1rem;
+  h6,
+  ul {
+    margin: 1.5rem 0;
+    li {
+      padding-bottom: 1rem;
+    }
+  }
+
+  a {
+    color: #fbd065;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  code {
+    background-color: white;
+    padding: 2px 4px;
+    font-size: 0.85rem;
+    border-radius: 2px;
+    color: black;
   }
 }
