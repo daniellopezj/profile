@@ -36,12 +36,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: 'src/',
   routeRules: {
-    '/**': { static: true, ssr: false },
-  },
-  runtimeConfig: {
-    public: {
-      baseURL: process.env.NUXT_PUBLIC_API_BASE_URL,
-    },
+    '/': { ssr: true },
+    '/about-me': { ssr: true },
+    '/projects/**': { ssr: true },
+    '/blog/**': { isr: true },
   },
   content: {
     highlight: {
