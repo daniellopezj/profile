@@ -36,7 +36,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: 'src/',
   routeRules: {
-    '/blog/**': { isr: true, ssr: false },
+    // '/blog/**': { isr: false, ssr: false },
   },
   content: {
     highlight: {

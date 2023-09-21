@@ -4,26 +4,26 @@
       <div>
         <v-img
           class="blog__header-icon"
-          :src="blog.icon"
+          :src="blog?.icon"
           alt="profile"
           width="100"
           height="100"
         />
       </div>
       <div class="blog__header-content">
-        <h1>{{ blog.title }}</h1>
+        <h1>{{ blog?.title }}</h1>
         <div class="blog__header-items">
-          <span class="blog__date">{{ blog.date }}</span>
-          <span class="blog__time">{{ blog.time }}</span>
+          <span class="blog__date">{{ blog?.date }}</span>
+          <span class="blog__time">{{ blog?.time }}</span>
         </div>
         <div class="blog__tags">
-          <span class="blog__tag" v-for="tag in blog.tags">
+          <span class="blog__tag" v-for="tag in blog?.tags">
             {{ tag }}
           </span>
         </div>
       </div>
     </div>
-    <ContentDoc class="blog__content-doc" :path="blog._path" />
+    <ContentRenderer class="blog__content-doc" :value="blog" />
   </div>
   <div v-else>cargando</div>
 </template>
@@ -31,29 +31,27 @@
 <script setup lang="ts">
 import { ParsedContent } from '@nuxt/content/dist/runtime/types';
 
-const blog: Ref<ParsedContent | null> = ref(null);
 const route = useRoute();
+const blog: Ref<ParsedContent | null> = ref(null);
 
-onBeforeMount(async () => {
-  const { data } = useAsyncData('', () => {
-    return queryContent('/')
-      .where({ _path: `/${route.params.slug as string}` })
-      .find();
-  });
-
-  watch(
-    () => data.value,
-    (newVal) => {
-      if (newVal) {
-        blog.value = newVal[0];
-        useContentHead(blog.value);
-        useHead({
-          title: blog.value.title,
-        });
-      }
-    },
-  );
+const { data } = useAsyncData('', async () => {
+  return queryContent('/')
+    .where({ _path: `/${route.params.slug as string}` })
+    .findOne();
 });
+blog.value = data.value;
+
+watch(
+  () => blog.value,
+  (newVal) => {
+    if (newVal) {
+      useContentHead(newVal);
+      useHead({
+        title: newVal.title,
+      });
+    }
+  },
+);
 </script>
 
 <style scoped lang="scss">
