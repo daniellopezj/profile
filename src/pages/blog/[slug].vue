@@ -29,17 +29,13 @@
 </template>
 
 <script setup lang="ts">
-import { ParsedContent } from '@nuxt/content/dist/runtime/types';
-
 const route = useRoute();
-const blog: Ref<ParsedContent | null> = ref(null);
 
-const { data } = useAsyncData('', async () => {
+const { data: blog } = useAsyncData('', () => {
   return queryContent('/')
     .where({ _path: `/${route.params.slug as string}` })
     .findOne();
 });
-blog.value = data.value;
 
 watch(
   () => blog.value,
