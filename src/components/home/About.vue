@@ -84,8 +84,8 @@
     }
 
     &__image {
-      background-color: red;
       width: 120px;
+      height: 120px;
       border: initial;
       border: 2px solid rgb(var(--v-theme-second));
       margin-bottom: 1rem;

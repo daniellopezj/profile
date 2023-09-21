@@ -35,18 +35,24 @@ const blog: Ref<ParsedContent | null> = ref(null);
 const route = useRoute();
 
 onBeforeMount(async () => {
-  const { data } = await useAsyncData('', () => {
+  const { data } = useAsyncData('', () => {
     return queryContent('/')
       .where({ _path: `/${route.params.slug as string}` })
       .find();
   });
-  if (data.value) {
-    blog.value = data.value[0];
-    useContentHead(blog.value);
-    useHead({
-      title: blog.value.title,
-    });
-  }
+
+  watch(
+    () => data.value,
+    (newVal) => {
+      if (newVal) {
+        blog.value = newVal[0];
+        useContentHead(blog.value);
+        useHead({
+          title: blog.value.title,
+        });
+      }
+    },
+  );
 });
 </script>
 
