@@ -48,7 +48,6 @@ pre {
   background: #0f131a !important;
 
   border-radius: 4px;
-  color: #fff;
   margin: 0;
   overflow: auto;
   padding: 16px;
@@ -81,19 +80,23 @@ pre {
       padding-bottom: 1rem;
     }
   }
+  p,
+  li {
+    code {
+      background-color: white;
+      padding: 2px 4px;
+      font-size: 0.85rem;
+      border-radius: 2px;
+      color: black;
+    }
+  }
 
   a {
     color: #fbd065;
     cursor: pointer;
     text-decoration: none;
   }
-  code {
-    background-color: white;
-    padding: 2px 4px;
-    font-size: 0.85rem;
-    border-radius: 2px;
-    color: black;
-  }
+
   table {
     margin: 2rem auto;
     min-width: 70%;

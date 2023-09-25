@@ -1,12 +1,12 @@
 <template>
-  <div class="blog__header">
+  <div class="blog__header" @click="navigateTo(`/blog${blog._path}`)">
     <div>
       <v-img
         class="blog__header-icon"
         :src="blog?.icon"
         alt="profile"
-        width="100"
-        height="100"
+        width="80"
+        height="80"
       />
     </div>
     <div class="blog__header-content">
@@ -41,9 +41,10 @@ h2 {
 }
 .blog {
   &__header {
+    cursor: pointer;
     display: flex;
     gap: 1rem;
-    margin-bottom: 3rem;
+    padding: 0.5rem;
     &-icon {
       border-radius: 8px;
     }
@@ -52,6 +53,9 @@ h2 {
       justify-content: center;
       flex-direction: column;
       gap: 0.5rem;
+      h2 {
+        font-size: 1.25rem;
+      }
     }
     &-items {
       display: flex;
@@ -59,11 +63,17 @@ h2 {
       align-items: center;
     }
   }
+  &__header:hover {
+    transform: scale(1.01);
+    background-color: rgb(255, 255, 255, 0.1);
+    border-radius: 8px;
+  }
 
   &__tags {
     display: flex;
     gap: 1rem;
   }
+
   &__tag {
     background-color: rgb(255, 255, 255, 0.9);
     color: black;
@@ -80,6 +90,41 @@ h2 {
   &__time {
     opacity: 0.65;
     font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .blog {
+    &__header {
+      align-items: center;
+      &-icon {
+        width: 60px !important;
+        height: 60px !important;
+        > img {
+          border-radius: 8px;
+        }
+      }
+      &-content {
+        h2 {
+          font-size: 1.15rem;
+        }
+      }
+      &-items {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
+      }
+    }
+    &__tags {
+      display: flex;
+      gap: 1rem;
+    }
+
+    &__time {
+      opacity: 0.65;
+      font-size: 0.85rem;
+    }
   }
 }
 </style>

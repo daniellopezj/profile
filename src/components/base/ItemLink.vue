@@ -22,11 +22,17 @@ defineProps({
 });
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .item-link__btn {
   border-radius: 8px;
   font-size: 0.9rem;
   opacity: 0.95;
   text-transform: capitalize;
+}
+
+.item-link__btn:hover {
+  .v-btn__overlay {
+    background-color: rgb(255, 255, 255, 0.2);
+  }
 }
 </style>
