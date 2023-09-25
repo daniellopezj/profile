@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'es',
+      },
       title: 'Daniel López | Frontend, JavaScript, vue, CSS ',
       script: [
         {
@@ -10,16 +13,16 @@ export default defineNuxtConfig({
           'data-cfasync': 'false',
           'data-id': 'daniellopezj',
           'data-description': 'Support me on Buy me a coffee!',
-          'data-message': '',
+          'data-message': '¡Muchas Gracias por tu apoyo!',
           'data-color': '#bf8415',
           'data-position': 'Right',
           'data-x_margin': '18',
           'data-y_margin': '18',
+          defer: true,
         },
       ],
     },
   },
-  // modules: ['@nuxt/content', 'nuxt-purgecss'],
   modules: ['@nuxt/content'],
   build: {
     transpile: ['vuetify'],
@@ -37,7 +40,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: 'src/',
   routeRules: {
-    // '/**': {static:true },
+    '/**': { static: true, ssr: false },
   },
   content: {
     highlight: {
