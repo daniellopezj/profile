@@ -2,6 +2,7 @@
 title: Porque aprender JavaScript
 image: porque-aprender-javascript.jpg
 icon: /icons/JavaScript.webp
+status: public
 tags:
   - 💻 Desarrollo
 time: 5 minutos de lectura
@@ -70,4 +71,10 @@ JavaScript es un lenguaje muy bien pagado, apesar de que hay muchos desarrollado
 
 ## 📚 Donde aprender JavaScript
 
-Es el lenguaje mas utilizado a niveel mundial segun stack Overflow
+Para iniciar en JavaScript hay un gran número de recursos que puedes utilizar, en Youtube te recomiendo el curso de [Carlos Azaustre](https://www.youtube.com/watch?v=S9ojNaeC1RI&ab_channel=CarlosAzaustre-AprendeJavaScript) y el de [midudev](https://www.youtube.com/watch?v=Z34BF9PCfYg&ab_channel=midulive) que te explican como funciona JavaScript desde cero, también puedes tomar cursos en alguna plataforma de educación como [udemy](https://www.udemy.com/), [platzi](https://platzi.com/), [coderhouse](https://www.coderhouse.com.co/), [freecodecamp](https://www.freecodecamp.org/), entre muchas otras.
+
+
+Todas las anteriores son muy buenas opciones para conocer lo básico del lenguaje y desarrollar proyectos pequeños. Si quieres mejorar tus habilidades de una manera más profesional, te invito a crear tus propios proyectos que den solución a un problema real. 
+
+
+Profundiza en la documentación propia del lenguaje, la cual puedes encontrarla en [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript ) o [devdocs](https://devdocs.io/javascript/). Esto te ayuda a comprender cada funcionalidad del lenguaje de una manera correcta. Al comienzo puede ser un poco tedioso leer documentación, pero con el tiempo será mucho más fácil y te convertirás en un excelente profesional.
