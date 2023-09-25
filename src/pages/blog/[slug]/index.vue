@@ -1,7 +1,7 @@
 <template>
   <div v-if="blog">
     <div class="blog__header">
-      <div>
+      <div class="blog__header-image">
         <v-img
           class="blog__header-icon"
           :src="blog?.icon"
@@ -29,19 +29,23 @@
 </template>
 
 <script setup lang="ts">
+import { ParsedContent } from '@nuxt/content/dist/runtime/types';
+
 const route = useRoute();
 
-const { data: blog } = useAsyncData('', () => {
+const blog: Ref<ParsedContent | null> = ref(null);
+const { data } = useAsyncData('', () => {
   return queryContent('/')
     .where({ _path: `/${route.params.slug as string}` })
     .findOne();
 });
 
 watch(
-  () => blog.value,
+  () => data.value,
   (newVal) => {
     if (newVal) {
-      useContentHead(newVal);
+      blog.value = newVal;
+      // useContentHead(newVal);
       useHead({
         title: newVal.title,
       });
@@ -56,10 +60,15 @@ watch(
     display: flex;
     gap: 1rem;
     margin-bottom: 3rem;
+    align-items: center;
+
     &-icon {
       border-radius: 8px;
     }
     &-content {
+      h1 {
+        margin: 0;
+      }
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -92,6 +101,30 @@ watch(
   &__time {
     opacity: 0.65;
     font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .blog {
+    &__header {
+      align-items: center;
+      margin-bottom: 1.5rem;
+      &-image {
+        display: none;
+      }
+      &-content {
+        h1 {
+          font-size: 1.75rem;
+          margin: 0;
+        }
+      }
+      &-items {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
+      }
+    }
   }
 }
 </style>

@@ -5,7 +5,6 @@ import {
   VIcon,
   VImg,
   VBtn,
-  VFooter,
   VAppBar,
   VNavigationDrawer,
 } from 'vuetify/components';
@@ -41,7 +40,6 @@ export default defineNuxtPlugin((nuxtApp) => {
       VIcon,
       VImg,
       VBtn,
-      VFooter,
       VAppBar,
       VNavigationDrawer,
     },

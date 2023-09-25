@@ -1,11 +1,11 @@
 <template>
-  <v-footer color="background" class="appfooter__container">
+  <footer color="background" class="appfooter__container">
     <div class="appfooter__content">
       <span class="pr-1">
         © {{ new Date().getFullYear() }} | Daniel López 💻
       </span>
     </div>
-  </v-footer>
+  </footer>
 </template>
 
 <script setup lang="ts"></script>

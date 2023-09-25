@@ -44,9 +44,8 @@ defineProps({
     grid-template-columns: 1fr 2fr;
   }
   &__container:hover {
-    opacity: 0.9;
-    transform: scale(0.98);
-    transition: transform 0.2s;
+    transform: scale(1.01);
+    background-color: rgb(255, 255, 255, 0.1);
   }
 
   &__description {
