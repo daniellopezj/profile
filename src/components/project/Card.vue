@@ -5,6 +5,7 @@
         class="project-card__image"
         aspect-ratio="16/9"
         cover
+        loading="lazy"
         :alt="project.title"
         :src="project.image"
       ></v-img>
@@ -65,6 +66,7 @@ defineProps({
 
   &__image {
     border-radius: 8px;
+    width: 250px;
     height: 150px;
   }
 
@@ -95,6 +97,7 @@ defineProps({
       grid-template-columns: 1fr;
     }
     &__image {
+      width: 100%;
       height: 180px;
     }
     &__title {
