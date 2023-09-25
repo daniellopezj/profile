@@ -5,11 +5,12 @@
         class="project-card__image"
         aspect-ratio="16/9"
         cover
+        :alt="project.title"
         :src="project.image"
       ></v-img>
     </div>
     <div class="project-card__body">
-      <h4>{{ project.title }}</h4>
+      <span class="project-card__title">{{ project.title }}</span>
       <span
         class="project-card__description"
         v-html="project.description"
@@ -43,7 +44,9 @@ defineProps({
     grid-template-columns: 1fr 2fr;
   }
   &__container:hover {
-    opacity: 0.85;
+    opacity: 0.9;
+    transform: scale(0.98);
+    transition: transform 0.2s;
   }
 
   &__description {
@@ -64,6 +67,11 @@ defineProps({
   &__image {
     border-radius: 8px;
     height: 150px;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    font-weight: bold;
   }
 
   &__body {
@@ -89,6 +97,9 @@ defineProps({
     }
     &__image {
       height: 180px;
+    }
+    &__title {
+      font-size: 1.1rem;
     }
     &__body {
       padding: 0;

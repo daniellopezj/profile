@@ -1,16 +1,16 @@
 <template>
-  <v-app-bar color="background" elevation="0" class="topbar__container">
+  <v-app-bar color="background" class="topbar__container">
     <div class="topbar__content">
       <NuxtLink class="topbar__container-name" :to="'/'">
         <v-img class="topbar__logo" src="/images/logo.png" alt="logo" />
         Daniel López
       </NuxtLink>
       <ul v-if="smAndUp" class="topbar__navigation">
-        <NuxtLink v-for="link in links" :key="link.id" :to="link.path">
-          <li>
+        <li v-for="link in links" :key="link.id">
+          <NuxtLink :to="link.path">
             {{ link.title }}
-          </li>
-        </NuxtLink>
+          </NuxtLink>
+        </li>
       </ul>
       <v-btn
         aria-label="menu"
@@ -31,11 +31,11 @@
     class="topbar__small-drawer"
   >
     <ul class="topbar__navigation-small">
-      <NuxtLink v-for="link in links" :key="link.id" :to="link.path">
-        <li>
+      <li v-for="link in links" :key="link.id">
+        <NuxtLink :to="link.path">
           {{ link.title }}
-        </li>
-      </NuxtLink>
+        </NuxtLink>
+      </li>
     </ul>
   </v-navigation-drawer>
 </template>
@@ -52,7 +52,6 @@ const links = [
   { id: 1, title: 'Sobre mí', path: '/about-me' },
   { id: 2, title: 'Proyectos', path: '/projects' },
   { id: 3, title: 'Blog', path: '/blog/' },
-  // { id: 3, title: 'Contacto', path: '/location' },
 ];
 
 const height = computed(() => {
@@ -71,6 +70,7 @@ const toggleDrawer = () => {
 .topbar {
   &__container {
     position: relative !important;
+    box-shadow: none !important;
   }
   &__content {
     display: flex;
@@ -85,6 +85,7 @@ const toggleDrawer = () => {
     gap: 2rem;
     a {
       text-decoration: none !important;
+      color: white;
     }
     li {
       cursor: pointer;
@@ -93,7 +94,9 @@ const toggleDrawer = () => {
       color: white;
     }
     li:hover {
-      color: rgba(var(--v-theme-second));
+      a {
+        color: rgba(var(--v-theme-second));
+      }
     }
   }
 
@@ -114,6 +117,7 @@ const toggleDrawer = () => {
     flex-direction: column;
     padding: 0.5rem;
     a {
+      color: white;
       text-decoration: none !important;
     }
     li {

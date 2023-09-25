@@ -1,5 +1,3 @@
-// import 'vuetify/styles';
-
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg';
 import {
   VApp,
