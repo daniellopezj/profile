@@ -51,7 +51,7 @@ const links = [
   { id: 0, title: 'Inicio', path: '/' },
   { id: 1, title: 'Sobre mí', path: '/about-me' },
   { id: 2, title: 'Proyectos', path: '/projects' },
-  { id: 3, title: 'Blog', path: '/blog/blog-1' },
+  { id: 3, title: 'Blog', path: '/blog/' },
   // { id: 3, title: 'Contacto', path: '/location' },
 ];
 

@@ -1,7 +1,16 @@
-import 'vuetify/styles';
+// import 'vuetify/styles';
+
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg';
-import * as components from 'vuetify/components';
-import * as directives from 'vuetify/directives';
+import {
+  VApp,
+  VContainer,
+  VIcon,
+  VImg,
+  VBtn,
+  VFooter,
+  VAppBar,
+  VNavigationDrawer,
+} from 'vuetify/components';
 import { createVuetify } from 'vuetify';
 
 export default defineNuxtPlugin((nuxtApp) => {
@@ -28,9 +37,17 @@ export default defineNuxtPlugin((nuxtApp) => {
         },
       },
     },
-    ssr: false,
-    components,
-    directives,
+    components: {
+      VApp,
+      VContainer,
+      VIcon,
+      VImg,
+      VBtn,
+      VFooter,
+      VAppBar,
+      VNavigationDrawer,
+    },
+    ssr: true,
     icons: {
       defaultSet: 'mdi',
       aliases,

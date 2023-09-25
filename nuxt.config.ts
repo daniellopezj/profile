@@ -19,6 +19,7 @@ export default defineNuxtConfig({
       ],
     },
   },
+  // modules: ['@nuxt/content', 'nuxt-purgecss'],
   modules: ['@nuxt/content'],
   build: {
     transpile: ['vuetify'],
@@ -36,7 +37,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: 'src/',
   routeRules: {
-    // '/blog/**': { isr: false, ssr: false },
+    // '/**': {static:true },
   },
   content: {
     highlight: {
