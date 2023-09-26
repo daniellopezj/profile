@@ -115,9 +115,9 @@ export const projects: Project[] = [
       'Portafolio Open Source 2 es un proyecto desarrollado para la comunidad, donde cualquier desarrollador con conocimientos básicos en <span class="highlight-word">Angular</span> puede tener un sitio web para compartir toda su información. Este portafolio está diseñado para manejar <span class="highlight-word">múltiples idiomas</span> y permitir el <span class="highlight-word">envío de correos</span> para que tus clientes puedan contactarte. Además, cuenta con un diseño completamente adaptativo a cualquier dispositivo.',
     link: [
       {
-        icon: mdiGithub,
+        icon: mdiWeb,
         text: 'ver Demo',
-        link: 'https://github.com/daniellopezj/personalPage',
+        link: 'https://daniellopezj.netlify.app/',
       },
       {
         icon: mdiGithub,

@@ -35,7 +35,7 @@
           aspect-ratio="16/9"
           src="/images/profile.webp"
           alt="profile"
-          sizes="120px sm:120px; md:150px"
+          sizes="xs:120px sm:120px md:150px"
         />
       </div>
     </div>
