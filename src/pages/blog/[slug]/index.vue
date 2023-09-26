@@ -34,24 +34,16 @@ import { ParsedContent } from '@nuxt/content/dist/runtime/types';
 const route = useRoute();
 
 const blog: Ref<ParsedContent | null> = ref(null);
-const { data } = useAsyncData('', () => {
+
+const fetchContent = async () => {
   return queryContent('/')
     .where({ _path: `/${route.params.slug as string}` })
     .findOne();
-});
+};
 
-watch(
-  () => data.value,
-  (newVal) => {
-    if (newVal) {
-      blog.value = newVal;
-      // useContentHead(newVal);
-      useHead({
-        title: newVal.title,
-      });
-    }
-  },
-);
+const data = await fetchContent();
+
+blog.value = data;
 </script>
 
 <style scoped lang="scss">
