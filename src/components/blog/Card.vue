@@ -1,7 +1,7 @@
 <template>
   <div class="blog__header" @click="navigateTo(`/blog${blog._path}`)">
     <div>
-      <v-img
+      <NuxtImg
         class="blog__header-icon"
         :src="blog?.icon"
         alt="profile"

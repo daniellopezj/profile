@@ -3,7 +3,6 @@ import {
   VApp,
   VContainer,
   VIcon,
-  VImg,
   VBtn,
   VAppBar,
   VNavigationDrawer,
@@ -13,9 +12,9 @@ import { createVuetify } from 'vuetify';
 export default defineNuxtPlugin((nuxtApp) => {
   const vuetify = createVuetify({
     theme: {
-      defaultTheme: 'customDark',
+      defaultTheme: 'dark',
       themes: {
-        customDark: {
+        dark: {
           dark: true,
           colors: {
             background: '#202225',
@@ -37,9 +36,8 @@ export default defineNuxtPlugin((nuxtApp) => {
     components: {
       VApp,
       VContainer,
-      VIcon,
-      VImg,
       VBtn,
+      VIcon,
       VAppBar,
       VNavigationDrawer,
     },

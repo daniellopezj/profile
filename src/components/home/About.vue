@@ -29,7 +29,13 @@
       </div>
       <h1 class="about__small-title">Ingeniero de Software</h1>
       <div class="about__container-image">
-        <v-img class="about__image" src="/images/profile.webp" alt="logo" />
+        <NuxtImg
+          class="about__image"
+          loading="lazy"
+          aspect-ratio="16/9"
+          src="/images/profile.webp"
+          alt="profile"
+        />
       </div>
     </div>
   </div>

@@ -1,5 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-
 export default defineNuxtConfig({
   app: {
     head: {
@@ -23,9 +22,19 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: ['@nuxt/content'],
+  modules: ['@nuxt/content', '@nuxt/image'],
   build: {
     transpile: ['vuetify'],
+  },
+  image: {
+    presets: {
+      thumbnail: {
+        modifiers: {
+          width: 100,
+          height: 100,
+        },
+      },
+    },
   },
   vite: {
     css: {
@@ -40,7 +49,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: 'src/',
   routeRules: {
-    // create routes for ssr pages
     // '/**': { static: true, ssr: false },
   },
   content: {

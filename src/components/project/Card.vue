@@ -1,14 +1,13 @@
 <template>
   <div class="project-card__container">
     <div class="project-card__container-image">
-      <v-img
+      <NuxtImg
         class="project-card__image"
-        aspect-ratio="16/9"
-        cover
         loading="lazy"
-        :alt="project.title"
+        aspect-ratio="16/9"
         :src="project.image"
-      ></v-img>
+        :alt="project.title"
+      />
     </div>
     <div class="project-card__body">
       <span class="project-card__title">{{ project.title }}</span>
@@ -66,7 +65,7 @@ defineProps({
 
   &__image {
     border-radius: 8px;
-    width: 250px;
+    width: 280px;
     height: 150px;
   }
 

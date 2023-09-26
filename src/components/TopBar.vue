@@ -2,7 +2,13 @@
   <v-app-bar color="background" class="topbar__container">
     <div class="topbar__content">
       <NuxtLink class="topbar__container-name" :to="'/'">
-        <v-img class="topbar__logo" src="/images/logo.png" alt="logo" />
+        <NuxtImg
+          class="topbar__logo"
+          loading="lazy"
+          aspect-ratio="16/9"
+          src="/images/logo.png"
+          alt="logo"
+        />
         Daniel López
       </NuxtLink>
       <ul v-if="smAndUp" class="topbar__navigation">
