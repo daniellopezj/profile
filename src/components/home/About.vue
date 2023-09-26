@@ -35,6 +35,7 @@
           aspect-ratio="16/9"
           src="/images/profile.webp"
           alt="profile"
+          sizes="120px sm:120px; md:150px"
         />
       </div>
     </div>
@@ -64,8 +65,6 @@
   }
 
   &__image {
-    width: 150px;
-    height: 150px;
     border-radius: 50%;
     border: 4px solid rgb(var(--v-theme-second));
   }
@@ -90,8 +89,6 @@
     }
 
     &__image {
-      width: 120px;
-      height: 120px;
       border: initial;
       border: 2px solid rgb(var(--v-theme-second));
       margin-bottom: 1rem;
