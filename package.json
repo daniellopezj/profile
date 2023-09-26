@@ -18,6 +18,7 @@
     "sass-loader": "^13.3.2"
   },
   "dependencies": {
+    "@nuxt/image": "^1.0.0-rc.2",
     "vuetify": "^3.3.15"
   }
 }

@@ -32,14 +32,12 @@
       Siempre tengo buena disposición para desarrollar nuevas habilidades y
       afrontar desafíos que se presentan en el camino.
     </p>
-    <p></p>
-    <v-img
+    <NuxtImg
       class="about-me__image"
+      loading="lazy"
+      aspect-ratio="16/9"
       src="/images/personal.webp"
-      alt="profile"
-      aspect-ratio="1/1"
-      width="450"
-      cover
+      alt="view in city"
     />
   </div>
 </template>
@@ -50,6 +48,18 @@
 .about-me {
   &__image {
     margin: auto;
+    display: flex;
+    width: 600px;
+  }
+}
+
+@media (max-width: 599px) {
+  .about-me {
+    &__image {
+      margin: auto;
+      display: flex;
+      width: 100%;
+    }
   }
 }
 </style>

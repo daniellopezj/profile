@@ -2,7 +2,7 @@
   <div v-if="blog">
     <div class="blog__header">
       <div class="blog__header-image">
-        <v-img
+        <NuxtImg
           class="blog__header-icon"
           :src="blog?.icon"
           alt="profile"
