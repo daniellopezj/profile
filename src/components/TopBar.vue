@@ -8,6 +8,7 @@
           aspect-ratio="16/9"
           src="/images/logo.png"
           alt="logo"
+          sizes="32px"
         />
         Daniel López
       </NuxtLink>
@@ -153,7 +154,6 @@ const toggleDrawer = () => {
       top: v-bind(height) !important;
     }
     &__logo {
-      width: 32px;
       border-radius: 50%;
       margin-left: 1rem;
       cursor: pointer;
