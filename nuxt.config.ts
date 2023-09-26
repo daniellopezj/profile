@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
   app: {
     head: {
@@ -39,6 +40,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: 'src/',
   routeRules: {
+    // create routes for ssr pages
     // '/**': { static: true, ssr: false },
   },
   content: {

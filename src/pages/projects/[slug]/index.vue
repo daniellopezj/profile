@@ -47,10 +47,7 @@ import { Project } from '~/types/project.types';
 const route = useRoute();
 const project: Ref<Project | undefined> = ref(undefined);
 
-onBeforeMount(() => {
-  const slug = route.params.slug;
-  project.value = projects.find((i) => i.slug === slug);
-});
+project.value = projects.find((i) => i.slug === route.params.slug);
 
 useHead({
   title: 'Proyectos',
