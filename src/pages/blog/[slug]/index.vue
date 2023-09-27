@@ -46,6 +46,7 @@ if (!data) {
   throw showError({ statusCode: 404, statusMessage: 'Page Not Found' });
 }
 blog.value = data;
+// add meta tags to head twitter card
 
 useHead({
   title: blog.value?.title,
@@ -74,6 +75,11 @@ useHead({
       hid: 'og:url',
       property: 'og:url',
       content: `https://daniellopezj.com/blog/${route.params.slug}`,
+    },
+    {
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image',
     },
     {
       hid: 'twitter:title',
