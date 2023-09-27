@@ -48,7 +48,6 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   srcDir: 'src/',
-
   routeRules: {
     // '/**': { static: true, ssr: false },
   },

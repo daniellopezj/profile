@@ -1,7 +1,6 @@
 <template>
   <v-app>
     <TopBar />
-
     <v-container class="main-container">
       <slot />
     </v-container>

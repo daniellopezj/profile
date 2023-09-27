@@ -1,4 +1,39 @@
 <template>
+  <Head>
+    <Title>Daniel López | Frontend, JavaScript, vue, CSS</Title>
+    <Meta
+      name="description"
+      content="Contenido sobre JavaScript y todas las novedades en el desarrollo FrontEnd"
+    />
+    <Meta
+      property="og:title"
+      content="Daniel López | Frontend, JavaScript, vue, CSS"
+    />
+    <Meta
+      property="og:description"
+      content="Contenido sobre JavaScript y todas las novedades en el desarrollo FrontEnd"
+    />
+
+    <Meta
+      property="og:image"
+      content="https://daniellopezj.com/images/main.webp"
+    />
+    <Meta property="og:url" content="https://daniellopezj.com/" />
+    <Meta name="twitter:card" content="summary_large_image" />
+    <Meta
+      name="twitter:title"
+      content="Daniel López | Frontend, JavaScript, vue, CSS"
+    />
+    <Meta
+      name="twitter:description"
+      content="Contenido sobre JavaScript y todas las novedades en el desarrollo FrontEnd"
+    />
+    <Meta
+      name="twitter:image"
+      content="https://daniellopezj.com/images/main.webp"
+    />
+    <Meta name="twitter:url" content="https://daniellopezj.com/" />
+  </Head>
   <div class="home__container">
     <home-about></home-about>
     <home-blog-list :blogs="blogs"></home-blog-list>
@@ -10,13 +45,20 @@
 <script setup lang="ts">
 useHead({
   title: 'Daniel López | Frontend, JavaScript, vue, CSS',
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://daniellopezj.com/',
+    },
+  ],
 });
+
 definePageMeta({
   layoyt: 'public',
 });
 
 const { data: blogs } = useAsyncData('', () => {
-  return queryContent('/').where({ status: 'public' }).find();
+  return queryContent('/').where({ status: 'public' }).limit(5).find();
 });
 </script>
 
