@@ -141,7 +141,10 @@ const toggleDrawer = () => {
   }
 
   &__logo {
-    width: 36px;
+    width: 32px;
+    height: 32px;
+    max-width: 100%;
+    max-height: 100%;
     margin-left: 1rem;
     cursor: pointer;
   }

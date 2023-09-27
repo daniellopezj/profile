@@ -1,6 +1,7 @@
 <template>
   <div class="home__container">
     <home-about></home-about>
+    <home-blog-list :blogs="blogs"></home-blog-list>
     <home-project-list></home-project-list>
     <base-social></base-social>
   </div>
@@ -12,6 +13,10 @@ useHead({
 });
 definePageMeta({
   layoyt: 'public',
+});
+
+const { data: blogs } = useAsyncData('', () => {
+  return queryContent('/').where({ status: 'public' }).find();
 });
 </script>
 
