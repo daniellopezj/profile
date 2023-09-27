@@ -9,6 +9,7 @@
       loading="lazy"
       aspect-ratio="16/9"
       :src="project.image"
+      width="900"
       :alt="project.title"
     />
     <div>

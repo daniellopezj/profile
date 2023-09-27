@@ -25,14 +25,14 @@ const { data: blogs } = useAsyncData('', () => {
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
   }
 }
 
 @media (max-width: 599px) {
   .home {
     &__container {
-      gap: 1.5rem;
+      gap: 1rem;
     }
   }
 }

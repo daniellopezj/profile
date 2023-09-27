@@ -35,14 +35,19 @@
           aspect-ratio="16/9"
           src="/images/profile.webp"
           alt="profile"
-          sizes="xs:120px sm:120px md:150px"
+          :width="mobile ? 120 : 150"
+          :height="mobile ? 120 : 150"
+          sizes="xs:1200px sm:120px md:150px"
         />
       </div>
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useDisplay } from 'vuetify';
+const { mobile } = useDisplay();
+</script>
 
 <style scoped lang="scss">
 .about {
@@ -65,8 +70,6 @@
   }
 
   &__image {
-    height: 150px;
-    width: 150px;
     max-width: 100%;
     max-height: 100%;
     border-radius: 50%;

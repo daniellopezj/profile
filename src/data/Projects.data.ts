@@ -5,6 +5,7 @@ export const projects: Project[] = [
   {
     id: 0,
     image: `/images/projects/clone-idealista.webp`,
+    // image: `/images/logo.png`,
     slug: 'clon-idealista',
     title: 'Clon Idealista',
     description:
