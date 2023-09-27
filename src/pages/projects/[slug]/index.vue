@@ -4,13 +4,15 @@
       <h1>{{ project.title }}</h1>
       <span class="project__description" v-html="project.description" />
     </div>
-    <NuxtImg
-      class="project__image"
-      loading="lazy"
-      aspect-ratio="16/9"
-      :src="project.image"
-      :alt="project.title"
-    />
+    <div class="project__image-container">
+      <NuxtImg
+        class="project__image"
+        loading="lazy"
+        aspect-ratio="16/9"
+        :src="project.image"
+        :alt="project.title"
+      />
+    </div>
     <div>
       <h2>💻Tecnologías utilizadas</h2>
       <div class="project__list-skills">
@@ -66,10 +68,15 @@ useHead({
     opacity: 0.85;
   }
 
-  &__image {
-    margin: auto;
+  &__image-container {
     display: flex;
-    width: 700px;
+    margin: auto;
+  }
+
+  &__image {
+    object-fit: cover;
+    display: flex;
+    width: 450px;
   }
 
   &__list-skills {

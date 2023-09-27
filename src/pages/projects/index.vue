@@ -66,9 +66,9 @@ const router = useRouter();
 
   &__list {
     margin: 2rem 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 }
 </style>

@@ -1,11 +1,11 @@
 <template>
   <div class="project-card__container">
     <div class="project-card__container-image">
-      <!-- loading="lazy" -->
       <NuxtImg
         class="project-card__image"
         aspect-ratio="16/9"
-        :src="project.image"
+        :quality="100"
+        :src="`${project.image}`"
         :alt="project.title"
       />
     </div>
@@ -62,14 +62,14 @@ defineProps({
 
   &__container-image {
     display: flex;
+    height: 150px;
   }
 
   &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 8px;
-    width: 280px;
-    height: 150px;
-    max-width: 100%;
-    max-height: 100%;
   }
 
   &__title {
@@ -97,10 +97,14 @@ defineProps({
       display: grid;
       gap: 1rem;
       grid-template-columns: 1fr;
+      height: auto;
+      padding: 0;
     }
     &__image {
       width: 100%;
       height: 180px;
+      min-height: 150px;
+      max-height: 100%;
     }
     &__title {
       font-size: 1.1rem;
