@@ -65,6 +65,10 @@
   }
 
   &__image {
+    height: 150px;
+    width: 150px;
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 50%;
     border: 4px solid rgb(var(--v-theme-second));
   }

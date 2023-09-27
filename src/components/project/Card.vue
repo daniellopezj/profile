@@ -1,9 +1,9 @@
 <template>
   <div class="project-card__container">
     <div class="project-card__container-image">
+      <!-- loading="lazy" -->
       <NuxtImg
         class="project-card__image"
-        loading="lazy"
         aspect-ratio="16/9"
         :src="project.image"
         :alt="project.title"
@@ -39,6 +39,7 @@ defineProps({
 .project-card {
   &__container {
     cursor: pointer;
+    padding: 0.5rem;
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 2fr;
@@ -67,6 +68,8 @@ defineProps({
     border-radius: 8px;
     width: 280px;
     height: 150px;
+    max-width: 100%;
+    max-height: 100%;
   }
 
   &__title {
