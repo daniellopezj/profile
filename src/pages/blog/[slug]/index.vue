@@ -42,8 +42,61 @@ const fetchContent = async () => {
 };
 
 const data = await fetchContent();
-
+if (!data) {
+  throw showError({ statusCode: 404, statusMessage: 'Page Not Found' });
+}
 blog.value = data;
+
+useHead({
+  title: blog.value?.title,
+  meta: [
+    {
+      hid: 'description',
+      name: 'description',
+      content: blog.value?.description,
+    },
+    {
+      hid: 'og:title',
+      property: 'og:title',
+      content: blog.value?.title,
+    },
+    {
+      hid: 'og:description',
+      property: 'og:description',
+      content: blog.value?.description,
+    },
+    {
+      hid: 'og:image',
+      property: 'og:image',
+      content: blog.value?.image,
+    },
+    {
+      hid: 'og:url',
+      property: 'og:url',
+      content: `https://daniellopezj.com/blog/${route.params.slug}`,
+    },
+    {
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: blog.value?.title,
+    },
+    {
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content: blog.value?.description,
+    },
+    {
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: blog.value?.image,
+    },
+    {
+      hid: 'twitter:url',
+      name: 'twitter:url',
+      content: `https://daniellopezj.com/blog/${route.params.slug}`,
+    },
+  ],
+});
 </script>
 
 <style scoped lang="scss">
