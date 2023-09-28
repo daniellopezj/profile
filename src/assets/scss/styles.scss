@@ -22,7 +22,6 @@ ul {
 
 p {
   margin: 1rem 0;
-  opacity: 0.9;
 }
 
 img {
@@ -32,6 +31,7 @@ img {
 
 .link {
   color: #fbd065;
+  font-weight: 500;
   cursor: pointer;
   text-decoration: none;
 }
@@ -60,7 +60,7 @@ pre {
 .blog__content-doc {
   p {
     margin: 0 0 1.5rem;
-    opacity: 0.9;
+    opacity: 0.95;
   }
   h1,
   h2,
@@ -97,6 +97,7 @@ pre {
 
   a {
     color: #fbd065;
+    font-weight: 500;
     cursor: pointer;
     text-decoration: none;
   }
