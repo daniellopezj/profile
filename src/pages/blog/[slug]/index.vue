@@ -49,7 +49,6 @@ if (!data) {
   throw showError({ statusCode: 404, statusMessage: 'Page Not Found' });
 }
 blog.value = data;
-// add meta tags to head twitter card
 
 useHead({
   title: blog.value?.title,

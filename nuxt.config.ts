@@ -27,6 +27,9 @@ export default defineNuxtConfig({
     ['@nuxtjs/robots', { configPath: '~/config/robots.config' }],
     'nuxt-simple-sitemap',
   ],
+  site: {
+    url: process.env.BASE_URL || 'http://localhost:3000',
+  },
   build: {
     transpile: ['vuetify'],
   },
