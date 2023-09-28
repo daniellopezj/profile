@@ -3,8 +3,12 @@ export default [
   { Allow: '/' },
   { BlankLine: true },
   { Comment: 'Host' },
-  { Host: process.env.BASE_URL || 'http://localhost:3000' },
+  { Host: process.env.NEXT_PUBLIC_VERCEL_URL || 'http://localhost:3000' },
   { BlankLine: true },
   { Comment: 'Sitemap' },
-  { Sitemap: `${process.env.BASE_URL || 'http://localhost:3000'}/sitemap.xml` },
+  {
+    Sitemap: `${
+      process.env.NEXT_PUBLIC_VERCEL_URL || 'http://localhost:3000'
+    }/sitemap.xml`,
+  },
 ];
