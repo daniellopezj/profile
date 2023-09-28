@@ -1,5 +1,5 @@
 <template>
-  <div class="blog__header" @click="navigateTo(`/blog${blog._path}`)">
+  <div class="blog__header" @click="navigateTo(`${blog._path}`)">
     <div>
       <NuxtImg
         class="blog__header-icon"

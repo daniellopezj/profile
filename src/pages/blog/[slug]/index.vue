@@ -1,4 +1,7 @@
 <template>
+  <Head>
+    <Meta name="twitter:card" content="summary_large_image" />
+  </Head>
   <div v-if="blog">
     <div class="blog__header">
       <div class="blog__header-image">
@@ -36,8 +39,8 @@ const route = useRoute();
 const blog: Ref<ParsedContent | null> = ref(null);
 
 const fetchContent = async () => {
-  return queryContent('/')
-    .where({ _path: `/${route.params.slug as string}` })
+  return queryContent('/blog')
+    .where({ _path: `/blog/${route.params.slug as string}` })
     .findOne();
 };
 
@@ -75,11 +78,6 @@ useHead({
       hid: 'og:url',
       property: 'og:url',
       content: `https://daniellopezj.com/blog/${route.params.slug}`,
-    },
-    {
-      hid: 'twitter:card',
-      name: 'twitter:card',
-      content: 'summary_large_image',
     },
     {
       hid: 'twitter:title',

@@ -14,11 +14,13 @@
     "@nuxt/devtools": "latest",
     "@types/node": "^18.17.3",
     "nuxt": "^3.6.5",
+    "nuxt-simple-sitemap": "^3.3.5",
     "sass": "^1.68.0",
     "sass-loader": "^13.3.2"
   },
   "dependencies": {
     "@nuxt/image": "^1.0.0-rc.2",
+    "@nuxtjs/robots": "^3.0.0",
     "vuetify": "^3.3.15"
   }
 }

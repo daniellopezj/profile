@@ -19,7 +19,7 @@ useHead({
 });
 
 const { data: blogs } = useAsyncData('', () => {
-  return queryContent('/').where({ status: 'public' }).find();
+  return queryContent('blog').where({ status: 'public' }).find();
 });
 </script>
 

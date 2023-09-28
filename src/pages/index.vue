@@ -57,7 +57,7 @@ definePageMeta({
 });
 
 const { data: blogs } = useAsyncData('', () => {
-  return queryContent('/').where({ status: 'public' }).limit(5).find();
+  return queryContent('blog').where({ status: 'public' }).limit(5).find();
 });
 </script>
 

@@ -8,6 +8,9 @@ tags:
   - 💻 Desarrollo
 time: 5 minutos de lectura
 date: 21 septiembre, 2023
+sitemap:
+  changefreq: monthly
+  priority: 0.7
 ---
 
 Cuando inicias en el mundo de la programación, puede ser difícil elegir qué lenguaje de programación aprender, dado que existe gran variedad. Entre los más populares están. `Python`, `Ruby`,`JavaScript`, `C#`, `PHP`, `Java`, `C++`, `Rust`.
