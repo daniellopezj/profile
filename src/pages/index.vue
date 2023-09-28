@@ -3,7 +3,7 @@
     <Title>Daniel López | Frontend, JavaScript, vue, CSS</Title>
     <Meta
       name="description"
-      content="Contenido sobre JavaScript y todas las novedades en el desarrollo FrontEnd"
+      content="Comparto contenido sobre JavaScript y todas las novedades en el desarrollo FrontEnd"
     />
     <Meta
       property="og:title"
@@ -11,9 +11,8 @@
     />
     <Meta
       property="og:description"
-      content="Contenido sobre JavaScript y todas las novedades en el desarrollo FrontEnd"
+      content="Comparto contenido sobre JavaScript y todas las novedades en el desarrollo FrontEnd"
     />
-
     <Meta
       property="og:image"
       content="https://daniellopezj.com/images/main.webp"
@@ -26,7 +25,7 @@
     />
     <Meta
       name="twitter:description"
-      content="Contenido sobre JavaScript y todas las novedades en el desarrollo FrontEnd"
+      content="Comparto contenido sobre JavaScript y todas las novedades en el desarrollo FrontEnd"
     />
     <Meta
       name="twitter:image"
@@ -58,7 +57,7 @@ definePageMeta({
 });
 
 const { data: blogs } = useAsyncData('', () => {
-  return queryContent('/').where({ status: 'public' }).limit(5).find();
+  return queryContent('blog').where({ status: 'public' }).limit(5).find();
 });
 </script>
 

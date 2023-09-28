@@ -5,7 +5,6 @@
       <blog-card
         v-for="blog in blogs"
         :key="blog._path"
-        @click="() => router.push(`blog${blog._path}`)"
         :blog="blog"
       ></blog-card>
     </div>
@@ -21,8 +20,6 @@ defineProps({
     required: true,
   },
 });
-
-const router = useRouter();
 </script>
 
 <style scoped lang="scss"></style>

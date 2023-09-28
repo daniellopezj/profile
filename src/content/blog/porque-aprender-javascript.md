@@ -1,6 +1,6 @@
 ---
 title: Porque aprender JavaScript
-description: En el este artículo se muestra porque JavaScript es la mejor opción para iniciar en la programación o si ya perteneces a la industria porque debe ser tu siguiente Lenguaje por aprender. 
+description: En este artículo se muestra porque JavaScript es la mejor opción para iniciar en la programación o si ya perteneces a la industria porque debe ser tu siguiente Lenguaje por aprender. 
 image: https://i.imgur.com/d3ktisO.png
 icon: /icons/JavaScript.webp
 status: public
@@ -8,6 +8,9 @@ tags:
   - 💻 Desarrollo
 time: 5 minutos de lectura
 date: 21 septiembre, 2023
+sitemap:
+  changefreq: monthly
+  priority: 0.7
 ---
 
 Cuando inicias en el mundo de la programación, puede ser difícil elegir qué lenguaje de programación aprender, dado que existe gran variedad. Entre los más populares están. `Python`, `Ruby`,`JavaScript`, `C#`, `PHP`, `Java`, `C++`, `Rust`.

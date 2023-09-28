@@ -32,7 +32,7 @@ defineProps({
 });
 
 const { data: blogs } = useAsyncData('', () => {
-  return queryContent('/').where({ status: 'public' }).limit(3).find();
+  return queryContent('blog').where({ status: 'public' }).limit(3).find();
 });
 </script>
 <style lang="scss" scoped>

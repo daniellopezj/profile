@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
     head: {
@@ -22,9 +21,20 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: ['@nuxt/content', '@nuxt/image'],
+  modules: [
+    '@nuxt/content',
+    '@nuxt/image',
+    ['@nuxtjs/robots', { configPath: '~/config/robots.config' }],
+    'nuxt-simple-sitemap',
+  ],
+  site: {
+    url: process.env.BASE_URL || 'http://localhost:3000',
+  },
   build: {
     transpile: ['vuetify'],
+  },
+  sitemap: {
+    strictNuxtContentPaths: true,
   },
   image: {
     presets: {
