@@ -28,7 +28,7 @@ export default defineNuxtConfig({
     'nuxt-simple-sitemap',
   ],
   site: {
-    url: process.env.BASE_URL || 'http://localhost:3000',
+    url: process.env.NEXT_PUBLIC_VERCEL_URL || 'http://localhost:3000',
   },
   build: {
     transpile: ['vuetify'],
