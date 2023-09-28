@@ -1,6 +1,7 @@
 <template>
   <Head>
     <Title>Daniel López | Frontend, JavaScript, vue, CSS</Title>
+    <Meta name="author" content="Daniel López" />
     <Meta
       name="description"
       content="Comparto contenido sobre JavaScript y todas las novedades en el desarrollo FrontEnd"

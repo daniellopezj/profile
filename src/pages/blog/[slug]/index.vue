@@ -1,5 +1,6 @@
 <template>
   <Head>
+    <Meta name="author" content="Daniel López" />
     <Meta name="twitter:card" content="summary_large_image" />
   </Head>
   <div v-if="blog">
