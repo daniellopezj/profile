@@ -26,9 +26,17 @@ export default defineNuxtConfig({
     '@nuxt/image',
     ['@nuxtjs/robots', { configPath: '~/config/robots.config' }],
     'nuxt-simple-sitemap',
+    'nuxt-gtag',
   ],
   site: {
     url: process.env.NEXT_PUBLIC_VERCEL_URL || 'http://localhost:3000',
+  },
+  gtag: {
+    id: process.env.NEXT_PUBLIC_GTAG_ID,
+    config: {
+      anonymize_ip: true,
+      send_page_view: false,
+    },
   },
   build: {
     transpile: ['vuetify'],
