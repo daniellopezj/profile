@@ -102,6 +102,10 @@ pre {
     text-decoration: none;
   }
 
+  a:hover {
+    text-decoration: underline;
+  }
+
   table {
     margin: 2rem auto;
     min-width: 70%;
