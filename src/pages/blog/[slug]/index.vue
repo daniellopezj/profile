@@ -186,7 +186,7 @@ useHead({
       font-weight: 500;
       padding: 8px 16px;
       color: black;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.5s ease-in-out;
     }
     &-button:hover {
       transform: translateY(-10px);
