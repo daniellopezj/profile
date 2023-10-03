@@ -49,7 +49,9 @@ import { ParsedContent } from '@nuxt/content/dist/runtime/types';
 import { mdiTwitter } from '@mdi/js';
 
 const route = useRoute();
-const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL;
+const baseUrl = ref(
+  process.env.NEXT_PUBLIC_VERCEL_URL || 'https://daniellopezj.com',
+);
 
 const blog: Ref<ParsedContent | null> = ref(null);
 
