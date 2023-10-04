@@ -33,6 +33,10 @@
       content="https://daniellopezj.com/images/main.webp"
     />
     <Meta name="twitter:url" content="https://daniellopezj.com/" />
+    <meta
+      name="keywords"
+      content="JavaScript, css, vue, nuxt, frontend, programación, desarrollo web"
+    />
   </Head>
   <div class="home__container">
     <home-about></home-about>

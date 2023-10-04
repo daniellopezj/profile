@@ -1,4 +1,9 @@
 <template>
+  <Head>
+    <Meta name="author" content="Daniel López" />
+    <Meta name="twitter:card" content="summary_large_image" />
+    <meta name="keywords" :content="project?.skills.join(', ')" />
+  </Head>
   <div class="project__container" v-if="project">
     <div>
       <h1>{{ project.title }}</h1>
@@ -52,7 +57,54 @@ const project: Ref<Project | undefined> = ref(undefined);
 project.value = projects.find((i) => i.slug === route.params.slug);
 
 useHead({
-  title: 'Proyectos',
+  title: project.value?.title,
+  meta: [
+    {
+      hid: 'description',
+      name: 'description',
+      content: project.value?.description,
+    },
+    {
+      hid: 'og:title',
+      property: 'og:title',
+      content: project.value?.title,
+    },
+    {
+      hid: 'og:description',
+      property: 'og:description',
+      content: project.value?.description,
+    },
+    {
+      hid: 'og:image',
+      property: 'og:image',
+      content: project.value?.image,
+    },
+    {
+      hid: 'og:url',
+      property: 'og:url',
+      content: `https://daniellopezj.com/projects/${route.params.slug}`,
+    },
+    {
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: project.value?.title,
+    },
+    {
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content: project.value?.description,
+    },
+    {
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: project.value?.image,
+    },
+    {
+      hid: 'twitter:url',
+      name: 'twitter:url',
+      content: `https://daniellopezj.com/blog/${route.params.slug}`,
+    },
+  ],
 });
 </script>
 
