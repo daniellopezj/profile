@@ -1,4 +1,7 @@
 <template>
+  <Head>
+    <Meta name="author" content="Daniel López" />
+  </Head>
   <div v-if="blogs">
     <h1>Últimos Artículos</h1>
 

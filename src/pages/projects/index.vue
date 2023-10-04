@@ -1,4 +1,7 @@
 <template>
+  <Head>
+    <Meta name="author" content="Daniel López" />
+  </Head>
   <div>
     <h1>proyectos</h1>
     <span class="projects__content">
