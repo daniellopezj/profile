@@ -49,15 +49,77 @@ console.log(mensaje); // Resultado: "Eres mayor de edad"
 const numero = 7;
 const esPar = numero % 2 === 0 ? "Es par" : "Es impar";
 console.log(esPar); // Resultado: "Es impar" 
-
 ```
 
-Los operadores en JavaScript pueden ser de los siguientes tipos 
+Los operadores en JavaScript son clasificados en tipos, aqui te dejo los mas usados. 
 
-- 🔹 **Operadores aritméticos**
-- 🔹 **Operadores de asignación**
-- 🔹 **Operadores de comparación**
-- 🔹 **Operadores lógicos**
-- 🔹 **Operadores de Cadena**
-- 🔹 **Operadores unitarios**
-- 🔹 **Operadores relacionales**
+- 🔹 [Operadores aritméticos](#operadores-aritméticos)
+- 🔹 [Operadores de asignación](#operadores-de-asignación)
+- 🔹 [Operadores de comparación](#operadores-de-comparación)
+- 🔹 [Operadores lógicos](#operadores-lógicos)
+- 🔹 [Operadores de Cadena](#operadores-de-cadena)
+- 🔹 [Operadores unitarios](#operadores-unitarios)
+- 🔹 [Operadores relacionales](#operadores-relacionales)
+
+## Operadores aritméticos
+
+Los operadores aritméticos se utilizan para realizar operaciones matemáticas básicas. Aquí están los operadores aritméticos en JavaScript:
+
+- `+` (suma)
+- `-` (resta)
+- `*` (multiplicación)
+- `/` (división)
+- `%` (módulo)
+
+## Operadores de asignación
+
+Los operadores de asignación se utilizan para asignar valores a variables. Aquí están los operadores de asignación en JavaScript:
+
+- `=` (asignación)
+- `+=` (suma y asignación)
+- `-=` (resta y asignación)
+- `*=` (multiplicación y asignación)
+- `/=` (división y asignación)
+- `%=` (módulo y asignación)
+
+## Operadores de comparación
+
+Los operadores de comparación se utilizan para comparar valores. Aquí están los operadores de comparación en JavaScript:
+
+- `==` (igualdad)
+- `!=` (desigualdad)
+- `>` (mayor que)
+- `<` (menor que)
+- `>=` (mayor o igual que)
+- `<=` (menor o igual que)
+- `===` (igualdad estricta)
+
+## Operadores lógicos
+
+Los operadores lógicos se utilizan para combinar expresiones booleanas. Aquí están los operadores lógicos en JavaScript:
+
+- `&&` (y lógico)
+- `||` (o lógico)
+- `!` (no lógico)
+
+## Operadores de Cadena
+
+Los operadores de cadena se utilizan para concatenar cadenas de texto. Aquí está el operador de cadena en JavaScript:
+
+- `+` (concatenación)
+
+## Operadores unitarios
+
+Los operadores unitarios se utilizan para realizar operaciones en un solo operando. Aquí están los operadores unitarios en JavaScript:
+
+- `++` (incremento)
+- `--` (decremento)
+- `+` (identidad)
+- `-` (negación)
+
+## Operadores relacionales
+
+Los operadores relacionales se utilizan para comparar valores. Aquí están los operadores relacionales en JavaScript:
+
+- `instanceof` (instancia de)
+- `in` (propiedad de)

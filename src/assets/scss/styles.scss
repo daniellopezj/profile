@@ -2,6 +2,10 @@
 @import './_variables.scss';
 @import './_fonts.scss';
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   margin: 0;
   user-select: text;
@@ -60,8 +64,15 @@ pre {
   margin-top: 1.7142857em;
   overflow-x: auto;
   padding: 0.8571429em 1.1428571em;
-  white-space: pre-wrap;
-  word-break: break-word;
+  display: block;
+  code {
+    color: white !important;
+    display: flex;
+    flex-direction: column;
+    span {
+      min-height: 20px;
+    }
+  }
 }
 
 .blog__content-doc {
@@ -99,6 +110,11 @@ pre {
       font-size: 0.85rem;
       border-radius: 2px;
       color: black;
+    }
+    a {
+      color: #ffffff;
+      cursor: pointer;
+      text-decoration: none;
     }
   }
 
