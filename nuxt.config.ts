@@ -71,7 +71,13 @@ export default defineNuxtConfig({
   },
   content: {
     highlight: {
-      theme: 'dark-plus',
+      theme: 'one-dark-pro',
     },
   },
 });
+//one-dark-pro
+
+//dracula
+//github-dark-dimmed
+//monokai
+//slack-dark
