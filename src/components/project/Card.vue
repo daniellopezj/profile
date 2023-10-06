@@ -46,7 +46,11 @@ defineProps({
   }
   &__container:hover {
     transform: scale(1.01);
+    transition: all 0.4s;
     background-color: rgb(255, 255, 255, 0.1);
+  }
+  &__container:not(:hover) {
+    animation: removeAnimation 0.3s ease-in-out;
   }
 
   &__description {
@@ -88,6 +92,15 @@ defineProps({
     span {
       text-decoration: underline;
     }
+  }
+}
+
+@keyframes removeAnimation {
+  0% {
+    transform: scale(1.005);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 

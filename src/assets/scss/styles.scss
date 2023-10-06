@@ -2,6 +2,10 @@
 @import './_variables.scss';
 @import './_fonts.scss';
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   margin: 0;
   user-select: text;
@@ -49,12 +53,26 @@ h2 {
 }
 
 pre {
-  background: #0f131a !important;
-
-  border-radius: 4px;
-  margin: 0;
-  overflow: auto;
-  padding: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  background: rgb(26, 40, 63, 0.6) !important;
+  border-radius: 0.375rem;
+  color: white !important;
+  font-size: 0.875em;
+  font-weight: 400;
+  line-height: 1.7142857;
+  margin-bottom: 1.7142857em;
+  margin-top: 1.7142857em;
+  overflow-x: auto;
+  padding: 0.8571429em 1.1428571em;
+  display: block;
+  code {
+    color: white !important;
+    display: flex;
+    flex-direction: column;
+    span {
+      min-height: 20px;
+    }
+  }
 }
 
 .blog__content-doc {
@@ -92,6 +110,11 @@ pre {
       font-size: 0.85rem;
       border-radius: 2px;
       color: black;
+    }
+    a {
+      color: #ffffff;
+      cursor: pointer;
+      text-decoration: none;
     }
   }
 

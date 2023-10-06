@@ -55,7 +55,7 @@ const baseUrl = ref(
 
 const blog: Ref<ParsedContent | null> = ref(null);
 
-const fetchContent = async () => {
+const fetchContent = () => {
   return queryContent('/blog')
     .where({ _path: `/blog/${route.params.slug as string}` })
     .findOne();

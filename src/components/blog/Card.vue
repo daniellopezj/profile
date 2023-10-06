@@ -65,8 +65,12 @@ h2 {
   }
   &__header:hover {
     transform: scale(1.01);
+    transition: all 0.4s;
     background-color: rgb(255, 255, 255, 0.1);
     border-radius: 8px;
+  }
+  &__header:not(:hover) {
+    animation: removeAnimation 0.3s ease-in-out;
   }
 
   &__tags {
@@ -90,6 +94,15 @@ h2 {
   &__time {
     opacity: 0.65;
     font-size: 0.85rem;
+  }
+}
+
+@keyframes removeAnimation {
+  0% {
+    transform: scale(1.005);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 

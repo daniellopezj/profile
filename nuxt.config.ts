@@ -71,7 +71,19 @@ export default defineNuxtConfig({
   },
   content: {
     highlight: {
-      theme: 'dark-plus',
+      theme: 'monokai',
+      preload: ['css', 'javascript', 'typescript'],
+    },
+
+    markdown: {
+      anchorLinks: false,
+      tags: {
+        pre: 'pre',
+      },
     },
   },
 });
+//one-dark-pro
+//dracula
+//monokai
+//slack-dark
