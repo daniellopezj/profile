@@ -2,7 +2,7 @@
 title: operadores en javascript
 image: first-post.jpg
 icon: /icons/JavaScript.webp
-status: public
+# status: public
 tags:
   - 💻 Desarrollo
 time: 5 minutos de lectura
