@@ -156,4 +156,14 @@ pre {
       }
     }
   }
+
+  blockquote {
+    margin: 1rem 0;
+    padding: 1rem 15px;
+    border-left: 5px solid rgb(var(--v-theme-textDark));
+    background-color: rgb(251, 208, 101, 0.1);
+    p {
+      margin: 0;
+    }
+  }
 }
