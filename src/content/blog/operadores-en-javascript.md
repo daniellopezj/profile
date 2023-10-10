@@ -2,7 +2,7 @@
 title: operadores en javascript
 image: first-post.jpg
 icon: /icons/JavaScript.webp
-status: public
+# status: public
 tags:
   - 💻 Desarrollo
 time: 5 minutos de lectura
@@ -19,20 +19,20 @@ JavaScript cuenta con operadores binarios y unitarios, además un operador terna
 El **operador binario** requiere dos o más operando, ya sean variables o valores.
 
 ```js
-x * y; //  Operandos x,y Operador (*)
-x + y + z; //  Operandos x,y,z Operador (+)
+x * y; // Operandos x,y Operador (*)
+x + y + z; // Operandos x,y,z Operador (+)
 ```
 
 Los **operadores unitarios** solo requieren un operando, ya sea antes o después del operador.
 
 ```js
-contador++; //  Operando 'contador' Operador (++)
-contador--; //  Operando 'contador' Operador (--)
-!existe; //  Operando 'existe' Operador (!)
-typeof texto; //  Operando 'texto' Operador (typeOf)
+contador++; // Operando 'contador' Operador (++)
+contador--; // Operando 'contador' Operador (--)
+!existe; // Operando 'existe' Operador (!)
+typeof texto; // Operando 'texto' Operador (typeOf)
 ```
 
-El **operador ternario**  es el único que utiliza tres operandos, un `if/else abreviado`
+El **operador ternario** es el único que utiliza tres operandos, un `if/else abreviado`
 
 ```js
 condition ? val1 : val2;
@@ -101,19 +101,19 @@ Los operadores de asignación se utilizan para asignar valores a variables. El o
 
  <!-- ***(\*) multiplicación*** -->
 
-- **_(\+=) suma y asignación_**
-- **_(\-=) resta y asignación_**
-- **_(\*=) multiplicación y asignación_**
-- **_(/=) división y asignación_**
-- **_(%=) módulo y asignación_**
-- **_(\*\*\=) exponencial y asignación_**
+- **_(\+=) Suma y asignación_**
+- **_(\-=) Resta y asignación_**
+- **_(\*=) Multiplicación y asignación_**
+- **_(/=) División y asignación_**
+- **_(%=) Módulo y asignación_**
+- **_(\*\*\=) Exponencial y asignación_**
 
 ```js
 // Nota: Para cada ejemplo x = 10, y = 5 
 let x = 10;
 let y = 5;
 
-x = y; // Equivalente a x =  y;
+x = y; // Equivalente a x = y;
 console.log(x); // Output: 5
 
 x += y; // Equivalente a x = x + y;
@@ -141,7 +141,7 @@ console.log(a); // Output: 8
 
 Los operadores de comparación toman dos operandos y retornar un valor booleano ya sea true o false, dependiendo del operador. Estos son utilizados en condicionales y ciclos.
 
-- **_(==) igualdad_**: Compara valores sin importar la diferencia de su tipo de dato `2 == '2'` va a ser `true`.
+- **_(==) Igualdad_**: Compara valores sin importar la diferencia de su tipo de dato `2 == '2'` va a ser `true`.
 
 ```js
 const a = 5;
@@ -153,7 +153,7 @@ console.log(b == '2'); // Output: true
 console.log(c == 'Hello'); // Output:false
 ```
 
-- **_(===) igualdad estricta_**: Diferencia de los tipos de datos `2 == '2'` va a ser `false` dado que está comparando un `Number` con un `String`
+- **_(===) Igualdad estricta_**: Diferencia de los tipos de datos `2 == '2'` va a ser `false` dado que está comparando un `Number` con un `String`
 
 ```js
 console.log(5 === 5); // Output: true
@@ -163,7 +163,7 @@ console.log(5 === 6); // Output: false
 console.log('hello' === 'hello'); // Output:true 
 ```
 
-- **_(!=) desigualdad_**: Devuelve `true` si los operandos no son iguales, no diferencia entre tipos de datos.
+- **_(!=) Desigualdad_**: Devuelve `true` si los operandos no son iguales, no diferencia entre tipos de datos.
 
 ```js
 console.log(3 != 5); // Output: true
@@ -172,9 +172,9 @@ console.log(3 != '3'); // Output: false
 console.log('hello' != 'Hello'); // Output:true 
 ```
 
-Explicación `console.log('hello' != 'Hello')` las primeras letras son transformadas a Unicode 'H' y 'h'. Estos caracteres no tienen el mismo código por ende no son igual lo cual retorna  ``true``.
+Explicación `console.log('hello' != 'Hello')` las primeras letras son transformadas a Unicode 'H' y 'h'. Estos caracteres no tienen el mismo código por ende no son igual lo cual retorna ``true``.
 
-- **_(!==) desigualdad estricta_**: Devuelve `true` si los operandos no son iguales, diferencia de tipos de datos
+- **_(!==) Desigualdad estricta_**: Devuelve `true` si los operandos no son iguales, diferencia de tipos de datos
 
 ```js
 console.log(3 !== '3'); // Output: true
@@ -183,7 +183,7 @@ console.log(3 !== '3'); // Output: true
 console.log('hello' !== 'Hello'); // Output:true
 ```
 
-- **_(\>) mayor que_**: Devuelve `true` si el primer operando es mayor al segundo
+- **_(\>) Mayor que_**: Devuelve `true` si el primer operando es mayor al segundo
 
 ```js
 console.log(5 > 2); // Output: true
@@ -193,7 +193,7 @@ console.log('hello' > 'Hello'); // Output:true
 ```
 Explicación: `console.log('hello' > 'Hello')` las primeras letras son transformadas a Unicode 'h' > 'H' y el código de 'h' es mayor al de 'H' por esta razón el output es `true`
 
-- **_(<) menor que_**: Devuelve `true` si el primer operando es menor al segundo
+- **_(<) Menor que_**: Devuelve `true` si el primer operando es menor al segundo
 
 ```js
 console.log(2 < 5); // Output: true
@@ -202,7 +202,7 @@ console.log(2 < '5'); // Output: true
 console.log('Hello' < 'hello'); // Output:true
 ```
 
-- **_(>=) mayor o igual que_**: Devuelve `true` si el primer operando es mayor o igual al segundo
+- **_(>=) Mayor o igual que_**: Devuelve `true` si el primer operando es mayor o igual al segundo
 
 ```js
 console.log(5 >= 2); // Output: true
@@ -211,7 +211,7 @@ console.log(5 >= '2'); // Output: true
 console.log('hello' >= 'Hello'); // Output:true
 ```
 
-- **_(<=) menor o igual que_**: Devuelve `true` si el primer operando es menor o igual al segundo
+- **_(<=) Nenor o igual que_**: Devuelve `true` si el primer operando es menor o igual al segundo
 
 ```js
 console.log(2 <= 5); // Output: true
@@ -225,7 +225,7 @@ console.log('Hello' <= 'hello'); // Output:true
 Los operadores lógicos se utilizan para combinar expresiones booleanas ya sean condiciones o variables
 
 - **_&&_**: Es la representación del Y lógico, obliga a que dos o más condiciones tengan un valor verdadero para que retorne un true, de lo contrario retorna false
-- **_||_**: Es la representación del O lógico,  Si al menos una condición de dos o más condiciones es verdadera, retornará un true, de lo contrario retorna false
+- **_||_**: Es la representación del O lógico, Si al menos una condición de dos o más condiciones es verdadera, retornará un true, de lo contrario retorna false
 - **_!_**: El NO lógico, niega el valor de una expresión booleana, si es verdadero retorna false y si es falso retorna true
 
 ```js
@@ -255,7 +255,7 @@ console.log(!(x === y)); // Output: true
 
 Los operadores de cadena se utilizan para unir cadenas de texto
 
-- **_(+) concatenación_**: Permite la unión de dos o más cadenas de texto, también podemos utilizar los `template literals` `` para concatenar cadenas de texto y variables
+- **_(+) Concatenación_**: Permite la unión de dos o más cadenas de texto, también podemos utilizar los `template literals` `` para concatenar cadenas de texto y variables
 
 ```js
 const nombre = 'Juan';
@@ -330,7 +330,7 @@ testFunction(); // ejecuta la función testFunction
 
 Los operadores relacionales comparan sus operandos y devuelven un valor `Boolean`
 
-- **_instanceof_**: Determina si el objeto especificado (operando1) es del tipo de objeto especificado (operando 2)  Sintaxis: `operando1 instanceof operando2`
+- **_instanceof_**: Determina si el objeto especificado (operando1) es del tipo de objeto especificado (operando 2) Sintaxis: `operando1 instanceof operando2`
 - **_in_**: Determina si una propiedad pertenece a un objeto
 
 ```js
