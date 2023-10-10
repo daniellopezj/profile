@@ -12,7 +12,7 @@
         />
         Daniel López
       </NuxtLink>
-      <ul v-if="smAndUp" class="topbar__navigation">
+      <ul class="topbar__navigation">
         <li v-for="link in links" :key="link.id">
           <NuxtLink :to="link.path">
             {{ link.title }}
@@ -20,9 +20,9 @@
         </li>
       </ul>
       <v-btn
+        class="topbar__button-menu"
         aria-label="menu"
         :rounded="4"
-        v-if="!smAndUp"
         icon
         @click="toggleDrawer"
       >
@@ -32,7 +32,6 @@
   </v-app-bar>
   <v-navigation-drawer
     color="background"
-    v-if="!smAndUp"
     v-model="drawer"
     location="top"
     class="topbar__small-drawer"
@@ -48,10 +47,8 @@
 </template>
 
 <script lang="ts" setup>
-import { useDisplay } from 'vuetify';
 import { mdiMenu } from '@mdi/js';
 
-const { smAndUp } = useDisplay();
 const drawer = ref(false);
 
 const links = [
@@ -62,10 +59,7 @@ const links = [
 ];
 
 const height = computed(() => {
-  if (drawer.value) {
-    return '48px';
-  }
-  return '0px';
+  return drawer.value ? '48px' : '0px';
 });
 
 const toggleDrawer = () => {
@@ -148,13 +142,25 @@ const toggleDrawer = () => {
     margin-left: 1rem;
     cursor: pointer;
   }
+  &__small-drawer,
+  &__button-menu {
+    display: none;
+  }
 }
 
 @media (max-width: 599px) {
   .topbar {
+    &__navigation {
+      display: none;
+    }
     &__small-drawer {
+      display: initial;
       height: fit-content !important;
       top: v-bind(height) !important;
+    }
+
+    &__button-menu {
+      display: initial;
     }
     &__logo {
       border-radius: 50%;

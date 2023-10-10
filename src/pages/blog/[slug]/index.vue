@@ -28,6 +28,7 @@
       </div>
     </div>
     <ContentRenderer class="blog__content-doc" :value="blog" />
+    <base-social></base-social>
     <div class="blog__share-twitter">
       <a
         class="blog__share-twitter-button"

@@ -65,12 +65,12 @@ h2 {
   }
   &__header:hover {
     transform: scale(1.01);
-    transition: all 0.4s;
+    transition: all 0.5s;
     background-color: rgb(255, 255, 255, 0.1);
     border-radius: 8px;
   }
   &__header:not(:hover) {
-    animation: removeAnimation 0.3s ease-in-out;
+    animation: removeAnimation 0.5s ease-in-out;
   }
 
   &__tags {
