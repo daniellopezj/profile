@@ -40,7 +40,7 @@
         src="/images/personal.webp"
         width="600"
         alt="view in city"
-        sizes="sm:300px md:00px"
+        sizes="sm:300px md:600px"
       />
     </div>
   </div>
@@ -58,7 +58,7 @@
     margin: auto;
     display: flex;
     width: 600px;
-    height: auto;
+    height: 800px;
   }
 }
 
@@ -71,6 +71,7 @@
       margin: auto;
       display: flex;
       width: 100%;
+      height: 480px;
     }
   }
 }
