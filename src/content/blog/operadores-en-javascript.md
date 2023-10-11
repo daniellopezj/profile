@@ -1,13 +1,16 @@
 ---
 title: operadores en javascript
-image: first-post.jpg
+description: En JavaScript, un operador es un símbolo especial utilizado para realizar operaciones sobre algún valor o una variable. JavaScript cuenta con operadores binarios y unitarios, además un operador ternario también llamado operador condicional.
+image: https://i.imgur.com/usamdBU.png
 icon: /icons/JavaScript.webp
-# status: public
+status: public
 tags:
   - 💻 Desarrollo
 time: 5 minutos de lectura
 date: 11 octubre, 2023
-sitemap: false
+sitemap:
+  changefreq: monthly
+  priority: 0.7
 ---
 
 En JavaScript, un operador es un símbolo especial utilizado para realizar operaciones sobre algún valor o una variable
@@ -363,3 +366,24 @@ console.log('edad' in persona); // Output: false
 ```
 
 Si desarrollas con JavaScript siempre vas a utilizar los operadores en tu diario vivir, es mejor conocer su funcionamiento y como utilizarlos correctamente. Espero que este artículo te haya sido de ayuda, si tienes alguna duda o sugerencia no dudes en escribirme.
+
+
+```js
+
+typeof {} 
+typeof undefined
+typeof null
+delete 
+void true
+instanceof
+in
+true && true // Output: true
+true && false // Output: false
+false && true // Output: false
+false && false // Output: false
+true || true // Output: true
+true || false // Output: true
+false || true // Output: true
+false || false // Output: false
+
+```

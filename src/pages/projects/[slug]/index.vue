@@ -14,6 +14,7 @@
         class="project__image"
         loading="lazy"
         aspect-ratio="16/9"
+        width="450"
         :src="project.image"
         :alt="project.title"
       />
@@ -159,6 +160,9 @@ useHead({
 
 @media (max-width: 599px) {
   .project {
+    &__image-container {
+      margin: initial;
+    }
     &__image {
       margin: auto;
       display: flex;
