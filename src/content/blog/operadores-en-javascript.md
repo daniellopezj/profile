@@ -366,24 +366,3 @@ console.log('edad' in persona); // Output: false
 ```
 
 Si desarrollas con JavaScript siempre vas a utilizar los operadores en tu diario vivir, es mejor conocer su funcionamiento y como utilizarlos correctamente. Espero que este artículo te haya sido de ayuda, si tienes alguna duda o sugerencia no dudes en escribirme.
-
-
-```js
-
-typeof {} 
-typeof undefined
-typeof null
-delete 
-void true
-instanceof
-in
-true && true // Output: true
-true && false // Output: false
-false && true // Output: false
-false && false // Output: false
-true || true // Output: true
-true || false // Output: true
-false || true // Output: true
-false || false // Output: false
-
-```
