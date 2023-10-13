@@ -1,7 +1,11 @@
 <template>
   <Head>
     <Meta name="author" content="Daniel López" />
-    <Meta name="twitter:card" content="summary_large_image" />
+    <Meta name="author" content="Daniel López" />
+    <Meta
+      name="description"
+      content="Hola Soy Daniel Lopez, Ingeniero de Software y Desarrollador Frontend. Comparto contenido sobre JavaScript y todas las novedades en el desarrollo FrontEnd. He trabajado para varias compañias a nivel internacional, lo cual me ha permitido conocer personas maravillosas que han impulsado mi crecimiento personal y profesional."
+    />
   </Head>
   <div class="about__container">
     <about-me></about-me>
