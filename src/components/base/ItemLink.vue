@@ -1,6 +1,7 @@
 <template>
   <v-btn
-    aria-label="social-network"
+    :aria-label="link.text"
+    role="link"
     class="item-link__btn"
     :prepend-icon="link.icon"
     :href="link.link"
