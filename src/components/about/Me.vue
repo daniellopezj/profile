@@ -35,8 +35,6 @@
     <div class="about-me__container-image">
       <NuxtImg
         class="about-me__image"
-        loading="lazy"
-        aspect-ratio="16/9"
         src="/images/personal.webp"
         width="600"
         alt="view in city"
@@ -71,7 +69,7 @@
       margin: auto;
       display: flex;
       width: 100%;
-      height: 480px;
+      height: 100%;
     }
   }
 }
