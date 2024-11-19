@@ -6,7 +6,7 @@
         <p>
           ¡Hola! 👋 Mi nombre es Daniel López,
           <span class="highlight-word">ingeniero de software</span>
-          con mas de 4 años de experiencia en el mundo de la programación.
+          con mas de 5 años de experiencia en el mundo de la programación.
         </p>
         <p>
           Mi especialidad es el desarrollo
