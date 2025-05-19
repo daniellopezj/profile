@@ -1,0 +1,27 @@
+{
+  "nuxtSiteConfig": {
+    "name": "Daniel López Portfolio",
+    "description": "Frontend Engineer & Software Developer"
+  },
+  "about": {
+    "title": "Software Engineer",
+    "paragraph1": {
+      "before": "Hi! 👋 My name is Daniel López,",
+      "highlight": "software engineer",
+      "after": "with more than 5 years of experience in the world of programming."
+    },
+    "paragraph2": {
+      "before": "My specialty is",
+      "highlight": "frontend",
+      "after": "development and I create content about programming and web development."
+    },
+  "paragraph3": {
+      "before": "I also work remotely as a",
+      "highlight": "Senior Frontend Engineer",
+      "after": "at",
+      "company": "Kiteris",
+      "location": "a company in Spain."
+    },
+    "smallTitle": "Software Engineer"
+  }
+}
