@@ -1,39 +1,39 @@
 <template>
   <div class="about__container">
-    <h1 class="about__title">{{ $t('about.title') }}</h1>
+    <h1 class="about__title">{{ t('about.title') }}</h1>
     <div class="about__content">
       <div>
         <p>
-          {{ $t('about.paragraph1.before') }}
+          {{ t('about.paragraph1.before') }}
           <span class="highlight-word">
-            {{ $t('about.paragraph1.highlight') }}
+            {{ t('about.paragraph1.highlight') }}
           </span>
-          {{ $t('about.paragraph1.after') }}
+          {{ t('about.paragraph1.after') }}
         </p>
         <p>
-          {{ $t('about.paragraph2.before') }}
+          {{ t('about.paragraph2.before') }}
           <span class="highlight-word">
-            {{ $t('about.paragraph2.highlight') }}
+            {{ t('about.paragraph2.highlight') }}
           </span>
-          {{ $t('about.paragraph2.after') }}
+          {{ t('about.paragraph2.after') }}
         </p>
         <p>
-          {{ $t('about.paragraph3.before') }}
+          {{ t('about.paragraph3.before') }}
           <span class="highlight-word">
-            {{ $t('about.paragraph3.highlight') }}
+            {{ t('about.paragraph3.highlight') }}
           </span>
-          {{ $t('about.paragraph3.after') }}
+          {{ t('about.paragraph3.after') }}
           <NuxtLink
             class="link"
             to="https://www.linkedin.com/company/kiteris"
             target="_blank"
           >
-            {{ $t('about.paragraph3.company') }}
+            {{ t('about.paragraph3.company') }}
           </NuxtLink>
-          {{ $t('about.paragraph3.location') }}
+          {{ t('about.paragraph3.location') }}
         </p>
       </div>
-      <h1 class="about__small-title">{{ $t('about.smallTitle') }}</h1>
+      <h1 class="about__small-title">{{ t('about.smallTitle') }}</h1>
       <div class="about__container-image">
         <NuxtImg
           class="about__image"
@@ -50,7 +50,10 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+
+const { t } = useI18n();
+</script>
 
 <style scoped lang="scss">
 .about {
