@@ -1,6 +1,6 @@
 {
- 
-    "nuxtSiteConfig": {
+  "switchLanguage": "Cambiar idioma",
+  "nuxtSiteConfig": {
     "name": "Portafolio de Daniel López",
     "description": "Ingeniero Frontend y Desarrollador de Software"
   },
@@ -16,7 +16,7 @@
       "highlight": "frontend",
       "after": "y me dedico a crear contenido sobre programación y desarrollo web."
     },
-   "paragraph3": {
+    "paragraph3": {
       "before": "Además, trabajo de forma remota como",
       "highlight": "Senior Frontend Engineer",
       "after": "en",
@@ -24,5 +24,14 @@
       "location": "una empresa de España."
     },
     "smallTitle": "Ingeniero de Software"
+  },
+  "projects": {
+    "latestArticles": "Últimos artículos"
+  },
+  "navbar": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "articles": "Artículos"
   }
 }

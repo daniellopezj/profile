@@ -15,10 +15,11 @@
       <ul class="topbar__navigation">
         <li v-for="link in links" :key="link.id">
           <NuxtLink :to="link.path">
-            {{ link.title }}
+            {{ t(`navbar.${link.key}`) }}
           </NuxtLink>
         </li>
       </ul>
+      <BaseLanguageControl />
       <v-btn
         class="topbar__button-menu"
         aria-label="menu"
@@ -39,7 +40,7 @@
     <ul class="topbar__navigation-small">
       <li v-for="link in links" :key="link.id">
         <NuxtLink :to="link.path">
-          {{ link.title }}
+          {{ t(`navbar.${link.key}`) }}
         </NuxtLink>
       </li>
     </ul>
@@ -49,13 +50,13 @@
 <script lang="ts" setup>
 import { mdiMenu } from '@mdi/js';
 
+const { t } = useI18n();
 const drawer = ref(false);
-
 const links = [
-  { id: 0, title: 'Inicio', path: '/' },
-  { id: 1, title: 'Sobre mí', path: '/about-me' },
-  { id: 2, title: 'Proyectos', path: '/projects' },
-  { id: 3, title: 'Artículos', path: '/blog/' },
+  { id: 0, key: 'home', path: '/' },
+  { id: 1, key: 'about', path: '/about-me' },
+  { id: 2, key: 'projects', path: '/projects' },
+  { id: 3, key: 'articles', path: '/blog/' },
 ];
 
 const height = computed(() => {

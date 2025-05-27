@@ -1,4 +1,5 @@
 {
+   "switchLanguage": "Switch language",
   "nuxtSiteConfig": {
     "name": "Daniel López Portfolio",
     "description": "Frontend Engineer & Software Developer"
@@ -23,5 +24,14 @@
       "location": "a company in Spain."
     },
     "smallTitle": "Software Engineer"
+  },
+    "projects": {
+    "latestArticles": "Latest Articles"
+  },
+    "navbar": {
+    "home": "Home",
+    "about": "About Me",
+    "projects": "Projects",
+    "articles": "Articles"
   }
 }
