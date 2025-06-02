@@ -1,7 +1,3 @@
-import { fileURLToPath } from 'url';
-import { resolve, dirname } from 'path';
-import VueI18nVitePlugin from '@intlify/unplugin-vue-i18n/vite';
-
 export default defineNuxtConfig({
   app: {
     head: {
@@ -31,7 +27,6 @@ export default defineNuxtConfig({
     ['@nuxtjs/robots', { configPath: '~/config/robots.config' }],
     'nuxt-simple-sitemap',
     'nuxt-gtag',
-    '@nuxtjs/i18n'
   ],
   site: {
     url: process.env.NEXT_PUBLIC_VERCEL_URL || 'http://localhost:3000',
@@ -68,20 +63,6 @@ export default defineNuxtConfig({
         },
       },
     },
-      plugins: [
-      VueI18nVitePlugin({
-        include: [
-          resolve(
-            dirname(fileURLToPath(import.meta.url)),
-            'src/locales/*.json',
-          ),
-        ],
-      }),
-    ],
-  },
-   i18n: {
-    detectBrowserLanguage: false,
-    vueI18n: './src/config/i18n.config.ts',
   },
   devtools: { enabled: true },
   srcDir: 'src/',
@@ -102,3 +83,7 @@ export default defineNuxtConfig({
     },
   },
 });
+//one-dark-pro
+//dracula
+//monokai
+//slack-dark

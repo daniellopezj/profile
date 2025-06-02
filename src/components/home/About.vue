@@ -1,39 +1,33 @@
 <template>
   <div class="about__container">
-    <h1 class="about__title">{{ $t('about.title') }}</h1>
+    <h1 class="about__title">Ingeniero de Software</h1>
     <div class="about__content">
       <div>
         <p>
-          {{ $t('about.paragraph1.before') }}
-          <span class="highlight-word">
-            {{ $t('about.paragraph1.highlight') }}
-          </span>
-          {{ $t('about.paragraph1.after') }}
+          ¡Hola! 👋 Mi nombre es Daniel López,
+          <span class="highlight-word">ingeniero de software</span>
+          con mas de 5 años de experiencia en el mundo de la programación.
         </p>
         <p>
-          {{ $t('about.paragraph2.before') }}
-          <span class="highlight-word">
-            {{ $t('about.paragraph2.highlight') }}
-          </span>
-          {{ $t('about.paragraph2.after') }}
+          Mi especialidad es el desarrollo
+          <span class="highlight-word">frontend</span>
+          y me dedico a crear contenido sobre programación y desarrollo web.
         </p>
         <p>
-          {{ $t('about.paragraph3.before') }}
-          <span class="highlight-word">
-            {{ $t('about.paragraph3.highlight') }}
-          </span>
-          {{ $t('about.paragraph3.after') }}
-          <NuxtLink
+          Además, trabajo de forma remota como 
+          <span class="highlight-word">Senior Frontend Engineer</span>
+          en
+          <nuxt-link
             class="link"
             to="https://www.linkedin.com/company/kiteris"
             target="_blank"
           >
-            {{ $t('about.paragraph3.company') }}
-          </NuxtLink>
-          {{ $t('about.paragraph3.location') }}
+            Kiteris,
+          </nuxt-link>
+          una empresa de España.
         </p>
       </div>
-      <h1 class="about__small-title">{{ $t('about.smallTitle') }}</h1>
+      <h1 class="about__small-title">Ingeniero de Software</h1>
       <div class="about__container-image">
         <NuxtImg
           class="about__image"
