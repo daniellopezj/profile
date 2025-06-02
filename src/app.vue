@@ -5,23 +5,24 @@
 </template>
 
 <script setup lang="ts">
-const language = useCookie('key_language', {
+const language = useCookie<string | null>('key_language', {
   maxAge: 60 * 60 * 24 * 30,
-  default: () => 'es',
+  default: () => null,
 });
-const i18n = useI18n();
+const { locale } = useI18n();
 
 onBeforeMount(() => {
   if (process.client) {
     if (!language.value) {
-      language.value = navigator.language.split('-')[0];
-      if (['en', 'es'].includes(language.value)) {
-        i18n.locale.value = language.value;
-      } else {
-        i18n.locale.value = 'en';
-      }
+      const browserLang = navigator.language.split('-')[0].toLowerCase();
+      const supportedLangs = ['en', 'es'];
+      const selectedLang = supportedLangs.includes(browserLang)
+        ? browserLang
+        : 'en';
+      language.value = selectedLang; // guarda en la cookie
+      locale.value = selectedLang;
     } else {
-      i18n.locale.value = language.value;
+      locale.value = language.value;
     }
   }
 });

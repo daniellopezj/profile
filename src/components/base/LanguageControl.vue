@@ -1,18 +1,25 @@
 <template>
   <v-btn
+    v-if="currentLocale"
+    :key="`lang-button-${currentLocale}`"
     class="topbar__lang-button"
     :ripple="false"
     :aria-label="t('switchLanguage')"
     @click="switchLanguage"
   >
-    <NuxtImg
-      aspect-ratio="16/9"
-      :src="`/images/flag-${currentLocale}.png`"
-      :alt="t('switchLanguage')"
-      class="flag-icon"
-      width="24"
-      height="24"
-    />
+    <ClientOnly>
+      <NuxtImg
+        :key="`flag-${currentLocale}`"
+        :src="
+          currentLocale === 'es' ? '/images/flag-es.png' : '/images/flag-en.png'
+        "
+        aspect-ratio="16/9"
+        :alt="t('switchLanguage')"
+        class="flag-icon"
+        width="24"
+        height="24"
+      />
+    </ClientOnly>
     <span class="topbar__lang-key">{{ currentLocale.toLowerCase() }}</span>
   </v-btn>
 </template>
@@ -21,11 +28,13 @@
 import { computed } from 'vue';
 
 const { locale, t } = useI18n();
+const language = useCookie('key_language');
 
 const currentLocale = computed(() => locale.value);
 
 const switchLanguage = () => {
   locale.value = locale.value === 'es' ? 'en' : 'es';
+  language.value = locale.value;
 };
 </script>
 
@@ -43,7 +52,7 @@ const switchLanguage = () => {
   }
 }
 
-.topbar__lang-key{
+.topbar__lang-key {
   font-weight: bold !important;
 }
 </style>
