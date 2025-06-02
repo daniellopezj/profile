@@ -19,7 +19,7 @@
     <p>
       Disfruto crear software, en especial la parte
       <span class="highlight-word">Frontend.</span>
-      Cuento con más de 4 años de experiencia en el mundo de la programación.
+      Cuento con más de 5 años de experiencia en el mundo de la programación.
     </p>
     <p>
       Tener
